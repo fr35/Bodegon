@@ -7,7 +7,7 @@ export default function OffCanvas() {
                 <button type="button" className="btn-close text-reset position-absolute end-0 me-4 mt-1" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body mt-5">
-            <h2 className="offcanvas-title center mb-4" id="offcanvasNavbarLabel">dELIVERY</h2>
+            <h2 className="offcanvas-title center mb-4" id="offcanvasNavbarLabel">Bodegón</h2>
             <DropdownList></DropdownList>
         </div>
     </div>
