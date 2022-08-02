@@ -1,3 +1,5 @@
+import Contador from "./Contador/Contador"
+
 export default function Producto( props ) {
     const imgSize = {height: "200px",}
     return (
@@ -7,8 +9,8 @@ export default function Producto( props ) {
                             <div className="card-body p-4">
                                 <div className="text-center">
                                     <h5 className="fw-bolder">{props.data.nombre}</h5>
-                                    <p>{props.data.descript}</p>
                                     <h5 className="fw-bolder">${props.data.precio}</h5>
+                                    <Contador inicial={1} stock={props.data.stock}/>
                                 </div>
                             </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
