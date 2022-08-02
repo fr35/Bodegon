@@ -1,5 +1,5 @@
 import Carrito from "./Carrito/Carrito";
-import OffCanvas from "./OffCanvas";
+import OffCanvas from "./OffCanvas/OffCanvas";
 import Registro from "./Registro/Registro";
 
 
