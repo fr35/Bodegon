@@ -1,6 +1,8 @@
+import Categoria from "./Categorias/Categorias";
 import Producto from "./Producto/Product";
 
 export default function ItemLitsContainer() {
+    
     const productos = [
         {
             nombre: 'Hamburguesa Doble en Combo',
@@ -20,6 +22,7 @@ export default function ItemLitsContainer() {
 
     return (
         <section>
+            <Categoria/>
             <div className="container px-4 px-lg-5 mt-5">
                 <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <Producto data={productos[0]}/>

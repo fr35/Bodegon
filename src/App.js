@@ -7,8 +7,8 @@ import ItemLitsContainer from './components/ItemList/ItemListContainer';
 function App() {
   return (
     <>
-      <Header></Header>
-      <ItemLitsContainer></ItemLitsContainer>
+      <Header/>
+      <ItemLitsContainer/>
     </>
   );
 }

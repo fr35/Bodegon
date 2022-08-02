@@ -8,7 +8,7 @@ export default function OffCanvas() {
         </div>
         <div className="offcanvas-body mt-5">
             <h2 className="offcanvas-title center mb-4" id="offcanvasNavbarLabel">Bodegón</h2>
-            <DropdownList></DropdownList>
+            <DropdownList/>
         </div>
     </div>
     )

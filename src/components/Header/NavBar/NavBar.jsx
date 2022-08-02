@@ -10,10 +10,10 @@ export default function NavBar() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <OffCanvas></OffCanvas>
+                <OffCanvas/>
                 <div>
-                    <Registro></Registro>
-                    <Carrito></Carrito>
+                    <Registro/>
+                    <Carrito/>
                 </div>
             </div>
         </nav>

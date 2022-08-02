@@ -1,8 +1,9 @@
 export default function Producto( props ) {
+    const imgSize = {height: "200px",}
     return (
         <div className="col mb-5">
                         <div className="card h-100">
-                            <img className="card-img-top" src={props.data.img} alt="..."/>
+                            <img className="card-img-top" src={props.data.img} alt="..." style={imgSize}/>
                             <div className="card-body p-4">
                                 <div className="text-center">
                                     <h5 className="fw-bolder">{props.data.nombre}</h5>
