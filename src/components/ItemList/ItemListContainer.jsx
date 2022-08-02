@@ -12,7 +12,7 @@ export default function ItemLitsContainer() {
         {
             nombre: 'Pizza Muzzarella Individual',
             precio: 1000,
-            img: 'https://foodish-api.herokuapp.com/images/pizza/pizza92.jpg',
+            img: 'https://foodish-api.herokuapp.com/images/pizza/pizza55.jpg',
             descript: 'Pizza Muzzarella individual 4 porciones',
             stock: 7,
         }

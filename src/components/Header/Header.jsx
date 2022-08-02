@@ -1,4 +1,4 @@
-
+import "./Header.css"
 import { Background } from "./Background";
 import NavBar from "./NavBar/NavBar";
 
