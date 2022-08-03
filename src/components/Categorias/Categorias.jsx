@@ -1,6 +1,7 @@
 import CategoriaList from "../CategoriaList/CategoriaList";
 
 export default function Categoria( props ) {
+
     const categorias = [
         {nombre: 'Hamburguesas', img: 'https://foodish-api.herokuapp.com/images/burger/burger63.jpg'},
         {nombre: 'Pizzas & Empanadas', img: 'https://foodish-api.herokuapp.com/images/pizza/pizza93.jpg'},
@@ -9,8 +10,9 @@ export default function Categoria( props ) {
         {nombre: 'Pastas', img: 'https://foodish-api.herokuapp.com/images/pasta/pasta8.jpg'},
         {nombre: 'Postres', img: 'https://foodish-api.herokuapp.com/images/dessert/dessert1.jpg'},
     ]
+    
     return (
-        <div className="container mt-5">
+        <section className="container mt-5">
             <h2 className="center mb-5">Categorias</h2>
             <div className="row">
                 <CategoriaList data={categorias[0]}/>
@@ -20,6 +22,6 @@ export default function Categoria( props ) {
                 <CategoriaList data={categorias[4]}/>
                 <CategoriaList data={categorias[5]}/>
             </div>
-        </div>
+        </section>
     )
 }

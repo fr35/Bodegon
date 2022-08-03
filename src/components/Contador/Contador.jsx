@@ -2,6 +2,7 @@ import { useState } from "react";
 import BtnAgregar from "../BtnAgregar/BtnAgregar";
 
 export default function Contador( {stock} ) {
+
     const [cantidad, setCantidad] = useState(1)
     const restar = () => {
         if (cantidad > 1) {
@@ -13,7 +14,9 @@ export default function Contador( {stock} ) {
             setCantidad(cantidad + 1);
         }
     }
+
     function agregarProd() {console.log(`agregaste ${cantidad} productos`);}
+
     return (
         <>
         <div className="d-flex center">

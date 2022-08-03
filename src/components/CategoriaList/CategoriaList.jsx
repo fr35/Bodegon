@@ -1,5 +1,7 @@
 export default function CategoriaList( props ) {
+
     const circle = {borderRadius: "50%", height: "100px", width: "120px"}
+
     return (
         <button className="col btn">
             <img src={props.data.img} alt="..." style={circle}/>

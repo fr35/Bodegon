@@ -1,8 +1,8 @@
-import Categoria from "../Categorias/Categorias";
+import Oferta from "../Oferta/Oferta";
 import Producto from "../Producto/Product";
 
-export default function ItemLitsContainer() {
-    
+export default function ProductContainer() {
+
     const productos = [
         {
             nombre: 'Hamburguesa Doble en Combo',
@@ -19,17 +19,15 @@ export default function ItemLitsContainer() {
             stock: 7,
         }
     ]
+    
 
     return (
-        <section>
-            <Categoria/>
-            <div className="container px-4 px-lg-5 mt-5">
+        <section className="container px-4 px-lg-5 mt-5">
+                <h2 className="center mb-5">Productos</h2>
                 <div className="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <Producto data={productos[0]}/>
                     <Producto data={productos[1]}/>
                 </div>
-            </div>
-        </section>
-        
+            </section>
     )
 }

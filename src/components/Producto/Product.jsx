@@ -1,6 +1,7 @@
 import Contador from "../Contador/Contador"
 
 export default function Producto( props ) {
+    
     const imgSize = {height: "200px",}
     
     return (
