@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BtnAgregar from "./BtnAgregar/BtnAgregar";
+import BtnAgregar from "../BtnAgregar/BtnAgregar";
 
 export default function Contador( {stock} ) {
     const [cantidad, setCantidad] = useState(1)

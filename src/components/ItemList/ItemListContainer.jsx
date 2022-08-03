@@ -1,5 +1,5 @@
-import Categoria from "./Categorias/Categorias";
-import Producto from "./Producto/Product";
+import Categoria from "../Categorias/Categorias";
+import Producto from "../Producto/Product";
 
 export default function ItemLitsContainer() {
     

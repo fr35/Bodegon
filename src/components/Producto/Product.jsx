@@ -1,8 +1,8 @@
-import Contador from "./Contador/Contador"
+import Contador from "../Contador/Contador"
 
 export default function Producto( props ) {
-    
     const imgSize = {height: "200px",}
+    
 
     return (
         <div className="col mb-5">

@@ -1,5 +1,5 @@
-import { Background } from "./Background/Background";
-import NavBar from "./NavBar/NavBar";
+import { Background } from "../Background/Background";
+import NavBar from "../NavBar/NavBar";
 
 
 export default function Header() {

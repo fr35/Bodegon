@@ -1,4 +1,4 @@
-import CategoriaList from "./CategoriaList/CategoriaList";
+import CategoriaList from "../CategoriaList/CategoriaList";
 
 export default function Categoria( props ) {
     const categorias = [

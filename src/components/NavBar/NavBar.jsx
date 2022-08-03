@@ -1,6 +1,6 @@
-import Carrito from "./Carrito/Carrito";
-import OffCanvas from "./OffCanvas/OffCanvas";
-import Registro from "./Registro/Registro";
+import Carrito from "../Carrito/Carrito";
+import OffCanvas from "../OffCanvas/OffCanvas";
+import Registro from "../Registro/Registro";
 
 
 export default function NavBar() {
