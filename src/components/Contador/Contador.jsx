@@ -13,6 +13,7 @@ export default function Contador( {stock} ) {
             setCantidad(cantidad + 1);
         }
     }
+    function agregarProd() {console.log(`agregaste ${cantidad} productos`);}
     return (
         <>
         <div className="d-flex center">
@@ -20,7 +21,7 @@ export default function Contador( {stock} ) {
             <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
             <button onClick={sumar} className='btn'>+</button>
         </div>
-        <BtnAgregar cantidad={cantidad}/>
+        <BtnAgregar cantidad={agregarProd}/>
         </>
     )
 }
