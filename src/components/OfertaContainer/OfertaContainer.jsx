@@ -24,9 +24,10 @@ export default function OfertaContainer() {
     return (
         
         <section className="container px-4 px-lg-5 mt-5">
-            <h2 className="center mb-5">Nuestras Ofertas del Día</h2>
+            <h2 className="center">Nuestras Ofertas del Día</h2>
+            <hr className='mb-5'/>
             <div className="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <Oferta data={ofertas[0]}/>
+                {ofertas.map((productoOferta) => <Oferta data={productoOferta} key={productoOferta.id}/>)}
             </div>
         </section>
     )
