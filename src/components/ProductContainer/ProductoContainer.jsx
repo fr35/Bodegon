@@ -1,4 +1,3 @@
-import Oferta from "../Oferta/Oferta";
 import Producto from "../Producto/Product";
 
 export default function ProductContainer() {
