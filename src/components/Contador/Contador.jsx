@@ -19,12 +19,12 @@ export default function Contador( {stock} ) {
 
     return (
         <>
-        <div className="d-flex center">
-            <button onClick={restar} className='btn'>-</button>
-            <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
-            <button onClick={sumar} className='btn'>+</button>
-        </div>
-        <BtnAgregar cantidad={agregarProd}/>
+            <div className="d-flex center">
+                <button onClick={restar} className='btn'>-</button>
+                <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
+                <button onClick={sumar} className='btn'>+</button>
+            </div>
+            <BtnAgregar cantidad={agregarProd}/>
         </>
     )
 }

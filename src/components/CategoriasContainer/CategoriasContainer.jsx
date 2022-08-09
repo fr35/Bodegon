@@ -1,6 +1,7 @@
-import CategoriaList from "../CategoriaList/CategoriaList";
+import CategoriaList from "../CategoriaList/CategoriaList"
 
-export default function Categoria( props ) {
+
+export default function CategoriasContainer() {
 
     const categorias = [
         {nombre: 'Hamburguesas', img: 'https://foodish-api.herokuapp.com/images/burger/burger63.jpg'},
@@ -13,7 +14,8 @@ export default function Categoria( props ) {
     
     return (
         <section className="container mt-5">
-            <h2 className="center mb-5">Categorias</h2>
+            <h2 className="center mb-3">Categorias</h2>
+            <hr/>
             <div className="row">
                 <CategoriaList data={categorias[0]}/>
                 <CategoriaList data={categorias[1]}/>

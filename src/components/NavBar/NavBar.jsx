@@ -1,6 +1,6 @@
-import Carrito from "../Carrito/Carrito";
 import OffCanvas from "../OffCanvas/OffCanvas";
-import Registro from "../Registro/Registro";
+import LogIn from "../LogIn/LogIn";
+import Carrito from "../Carrito/Carrito";
 
 
 export default function NavBar() {
@@ -12,7 +12,7 @@ export default function NavBar() {
                 </button>
                 <OffCanvas/>
                 <div>
-                    <Registro/>
+                    <LogIn/>
                     <Carrito/>
                 </div>
             </div>

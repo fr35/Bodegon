@@ -1,15 +1,21 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Main from './components/Main/Main';
-
-
+import { Background } from './components/Background/Background';
+import CategoriasContainer from './components/CategoriasContainer/CategoriasContainer';
+import NavBar from './components/NavBar/NavBar';
+import OfertaProductosContainer from './components/OfertaProductosContainer/OfertaProductosContainer';
 
 
 function App() {
   return (
     <>
-      <Header/>
-      <Main/>
+      <header>
+        <NavBar/>
+        <Background/>
+      </header>
+      <main>
+        <CategoriasContainer/>
+        <OfertaProductosContainer/>
+      </main>
     </>
   );
 }
