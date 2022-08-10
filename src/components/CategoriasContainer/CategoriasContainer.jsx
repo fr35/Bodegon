@@ -18,11 +18,6 @@ export default function CategoriasContainer() {
             <hr/>
             <div className="row">
                 <CategoriaList data={categorias[0]}/>
-                <CategoriaList data={categorias[1]}/>
-                <CategoriaList data={categorias[2]}/>
-                <CategoriaList data={categorias[3]}/>
-                <CategoriaList data={categorias[4]}/>
-                <CategoriaList data={categorias[5]}/>
             </div>
         </section>
     )

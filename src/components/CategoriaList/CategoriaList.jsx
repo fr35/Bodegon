@@ -1,4 +1,4 @@
-export default function CategoriaList( props ) {
+export default function CategoryList( props ) {
 
     const circle = {borderRadius: "50%", height: "100px", width: "100px"}
     const sinBorde = {borderColor: 'white'}

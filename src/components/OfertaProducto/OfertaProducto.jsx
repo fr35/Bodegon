@@ -18,7 +18,7 @@ export default function OfertaProducto({nombre, price, img, stock, oferta, id}) 
                         <span className="text-muted text-decoration-line-through me-2">${price}</span>
                         <span className="fw-bolder">${total}</span>
                     </h5>
-                    <Contador/>
+                    <Contador stock={stock}/>
                 </div>
             </div>
         </div>

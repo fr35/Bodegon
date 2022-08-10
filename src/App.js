@@ -1,23 +1,18 @@
 import './App.css';
-import { Background } from './components/Background/Background';
-import CategoriasContainer from './components/CategoriasContainer/CategoriasContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
-import OfertaProductosContainer from './components/OfertaProductosContainer/OfertaProductosContainer';
+import Home from './pages/Home/Home';
 
 
 function App() {
   return (
-    <>
-      <header>
-        <NavBar/>
-        <Background/>
-      </header>
-      <main>
-        <CategoriasContainer/>
-        <OfertaProductosContainer/>
-      </main>
-    </>
-  );
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
