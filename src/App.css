@@ -15,7 +15,8 @@ header {
 #background {
   background-image: url(/public/fotos/bodegon.jpeg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   background-size: cover;
 }
+

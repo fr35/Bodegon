@@ -1,7 +1,7 @@
 
 export function Background() { 
-    const back = {height : '450px',}
+    const back = {height : '500px',}
     return (
-        <div className="py-5" id="background" style={back}/>
+        <div id="background" style={back} className="img-fluid"/>
     )
 }
