@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
+import OfertaDetailContainer from './components/OfertaDetailContainer/OfertaDetailContainer';
+
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/ofertas/:oferta' element={<OfertaDetailContainer/>}/>
       </Routes>
     </BrowserRouter>
   )

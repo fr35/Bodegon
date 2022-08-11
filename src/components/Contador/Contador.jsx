@@ -1,5 +1,5 @@
 import { useState } from "react";
-import BtnAgregar from "../BtnAgregar/BtnAgregar";
+
 
 export default function Contador( {stock} ) {
 
@@ -15,8 +15,6 @@ export default function Contador( {stock} ) {
         }
     }
 
-    function agregarProd() {console.log(`agregaste ${cantidad} productos`);}
-
     return (
         <>
             <div className="d-flex center">
@@ -24,7 +22,7 @@ export default function Contador( {stock} ) {
                 <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
                 <button onClick={sumar} className='btn'>+</button>
             </div>
-            <BtnAgregar cantidad={agregarProd}/>
+            
         </>
     )
 }

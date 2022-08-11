@@ -8,6 +8,7 @@ export default function CategoryList( {data} ) {
                     key={categoria.id}
                     nombre={categoria.nombre}
                     img={categoria.img}
+                    url={categoria.url}
                 />
             )
         })

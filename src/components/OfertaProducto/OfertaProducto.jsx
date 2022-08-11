@@ -1,13 +1,16 @@
 import Contador from "../Contador/Contador"
+import BtnAgregar from "../BtnAgregar/BtnAgregar";
 
-export default function OfertaProducto({nombre, price, img, stock, oferta, id}) {
+export default function OfertaProducto({nombre, price, img, stock, oferta, id, url}) {
+
     const cardSize = {height: "400px", width: "250px"}
     const imgSize = {height: "200px",}
     const badge = {top: '0.5rem', right: '0.5rem'}
     const total = price - (price * oferta) / 100
+    
 
     return (
-        <div className="col mb-5">
+        <div className="col mb-5 center">
         <div className="card" style={cardSize}>
             <div className="badge bg-dark text-white position-absolute" style={badge}>{oferta}%</div>
             <img className="card-img-top" src={img} alt="..." style={imgSize}/>
@@ -19,6 +22,7 @@ export default function OfertaProducto({nombre, price, img, stock, oferta, id}) 
                         <span className="fw-bolder">${total}</span>
                     </h5>
                     <Contador stock={stock}/>
+                    <BtnAgregar url={url}/>
                 </div>
             </div>
         </div>

@@ -3,16 +3,17 @@ import OfertaProducto from "../OfertaProducto/OfertaProducto"
 
 export default function OfertaProductosList({data}) {
     return (
-        data.map((product) => {
+        data.map((producto) => {
             return (
                 <OfertaProducto
-                    key={product.id}
-                    nombre={product.nombre}
-                    price={product.price}
-                    img={product.img}
-                    stock ={product.stock}
-                    oferta = {product.oferta}
-                    id = {product.id}
+                    key={producto.id}
+                    nombre={producto.nombre}
+                    price={producto.price}
+                    img={producto.img}
+                    stock ={producto.stock}
+                    oferta = {producto.oferta}
+                    id = {producto.id}
+                    url={producto.url}
                 />
             )
         })
