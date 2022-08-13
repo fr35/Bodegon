@@ -6,7 +6,7 @@ export default function CategoryList( {data} ) {
             return (
                 <Categoria
                     key={categoria.id}
-                    nombre={categoria.nombre}
+                    nombreCategoria={categoria.nombreCategoria}
                     img={categoria.img}
                     url={categoria.url}
                 />

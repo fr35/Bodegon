@@ -9,7 +9,6 @@ const dataOfertas =
             "description": "Mix de achuras, pollo, asado, vacío, chorizo y morcilla con guarnición de papas fritas",
             "stock": 6,
             "oferta": 15,
-            "url": 'ofertas/parrillada-para-dos'
         }, 
         {
             "id": 2,
@@ -19,7 +18,6 @@ const dataOfertas =
             "description": "Milanesa de ternera a la napolitina con guarnición de papas fritas",
             "stock": 6,
             "oferta": 20,
-            "url": 'ofertas/milanesa-napolitana'
         }, 
         {
             "id": 3,
@@ -29,7 +27,6 @@ const dataOfertas =
             "description": "Sorrentinos de Ricota con salsa mixta. (En caso de querer cambiar la salsa por salsa de crema o tomate aclararlo en los comentarios)",
             "stock": 14,
             "oferta": 25,
-            "url": 'ofertas/sorrentinos-de-ricota'
         }, 
         {
             "id": 4,
@@ -39,7 +36,6 @@ const dataOfertas =
             "description": "Porción de rabas ideal para compartir entre dos personas",
             "stock": 10,
             "oferta": 5,
-            "url": 'ofertas/rabas'
         }, 
         {
             "id": 5,
@@ -49,7 +45,6 @@ const dataOfertas =
             "description": "Suprema de pollo a la napolitina con guarnición de papas fritas",
             "stock": 5,
             "oferta": 20,
-            "url": 'ofertas/suprema-napolitana'
         }, 
         {
             "id": 6,
@@ -59,7 +54,6 @@ const dataOfertas =
             "description": "Pollo al Champignon con papas cuadrille",
             "stock": 15,
             "oferta": 10,
-            "url": 'ofertas/pollo-al-champignon'
         }, 
         {
             "id": 7,
@@ -69,7 +63,6 @@ const dataOfertas =
             "description": "Pastel de papas gratinado",
             "stock": 12,
             "oferta": 10,
-            "url": 'ofertas/pastel-de-papas'
         }, 
         {
             "id": 8,
@@ -79,7 +72,6 @@ const dataOfertas =
             "description": "Bondiola hecha al disco con cerveza negra, miel y verduras",
             "stock": 2,
             "oferta": 5,
-            "url": 'ofertas/bondiola-al-disco'
         }, 
         {
             "id": 9,
@@ -89,7 +81,6 @@ const dataOfertas =
             "description": "Ravioles de Ricota con salsa mixta. (En caso de querer cambiar la salsa por salsa de crema o tomate aclararlo en los comentarios)",
             "stock": 5,
             "oferta": 20,
-            "url": 'ofertas/ravioles-de-ricota'
         }, 
         {
             "id": 10,
@@ -99,7 +90,6 @@ const dataOfertas =
             "description": "Tortilla de papa para dos personas",
             "stock": 12,
             "oferta": 10,
-            "url": 'ofertas/tortilla-de-papa'
         }
     ]
 

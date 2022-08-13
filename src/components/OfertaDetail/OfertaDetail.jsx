@@ -1,26 +1,25 @@
-import BtnAgregar from "../BtnAgregar/BtnAgregar"
+import { Link } from "react-router-dom"
+import BtnCardProducts from "../BtnCardProducts/BtnCardProducts"
 import Contador from "../Contador/Contador"
 
-export default function OfertaDetail({data}) {
-    const imgSize = {height: "350px"}
-    const total = data.price - (data.price * data.oferta) / 100
-
+export default function OfertaDetail({id, nombre, img, price, oferta, description, stock}) {
     return (
         <section className="container">
             <div className="row">
                 <div className="col center">
-                    <img src={data.img} style={imgSize}></img>
+                    <img src={img}></img>
                 </div>
                 <div className="col">
-                    <h2 className="center">{data.nombre}</h2>
-                    <p className="mt-3">{data.description}</p>
+                    <h2 className="center">{nombre}</h2>
+                    <p className="mt-3">{description}</p>
                     <h5 className="center">
-                        <span className="text-muted text-decoration-line-through me-2">${data.price}</span>
-                        <span className="fw-bolder">${total}</span>
+                        <span className="text-muted text-decoration-line-through me-2">${price}</span>
+                        <span className="fw-bolder">$</span>
                     </h5>
                     <Contador/>
-                    <div className="center"><button className="btn btn-outline-dark mt-2">Agregar al Carrito</button></div>
-                    <textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..."></textarea>
+                    <Link to={'/'}>
+                        <BtnCardProducts text={'Agregar al Carrito'}/>
+                    </Link>
                 </div>
             </div>
         </section>
