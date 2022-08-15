@@ -16,13 +16,10 @@ export default function Contador( {stock} ) {
     }
 
     return (
-        <>
             <div className="d-flex center">
                 <button onClick={restar} className='btn' style={sinBordes}>-</button>
                 <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
                 <button onClick={sumar} className='btn' style={sinBordes}>+</button>
             </div>
-            
-        </>
     )
 }
