@@ -282,7 +282,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 15,
         "img": "https://media.istockphoto.com/photos/homemade-italian-gnocchi-with-red-sauce-picture-id511095807?k=20&m=511095807&s=612x612&w=0&h=uNwGhggoiVyzgf8VG6uyKEoY530SgWzWl8FYPCQ9cdA=",
-        "descripción": "De espinaca, papa y calabaza. Con crema de verdeo, pollo y jamón"
+        "descripción": "De espinaca, papa y calabaza. Con crema de verdeo, pollo y jamón. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "ÑoquisVerdesGratinados",
@@ -292,7 +292,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 14,
         "img": "https://media.istockphoto.com/photos/gnocchi-with-spinach-and-parmesan-picture-id945594712?k=20&m=945594712&s=612x612&w=0&h=2VHBaVLocYxaVPxHuz9mKl2ghd9PIMLoUGXr2WylO8w=",
-        "descripción": "Con salsa 4 quesos, con jamon y champiñones"
+        "descripción": "Con salsa 4 quesos, con jamon y champiñones. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "ÑoquisDePapa",
@@ -302,7 +302,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 14,
         "img": "https://media.istockphoto.com/photos/cheese-gnocchi-with-blue-cheese-sauce-and-galic-picture-id942241014?k=20&m=942241014&s=612x612&w=0&h=zpEUrDJx5oiEWqLw4zlUCKukhMwlPzraTN5HAgRjjaA=",
-        "descripción": "Ñoquis de papa con crema"
+        "descripción": "Ñoquis de papa con crema. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "RaviolesDeCordero",
@@ -313,7 +313,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 9,
         "img": "https://media.istockphoto.com/photos/homemade-pumpkin-ravioli-with-butter-sauce-picture-id613033942?k=20&m=613033942&s=612x612&w=0&h=tCKJdb2NIuBxgP2WOQ1h1unCL1VHJaUVDaF7tixI3X4=",
-        "descripción": "Con crema de hongos secos"
+        "descripción": "Con crema de hongos secos. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "SorrentinosJamonQueso",
@@ -323,7 +323,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 2,
         "img": "https://media.istockphoto.com/photos/sorrentinos-with-bolognese-sauce-picture-id1331997115?k=20&m=1331997115&s=612x612&w=0&h=OPrRQ38nbW1X77BV_6JVoHHfdTNQgat_R7K1vm5gnt0=",
-        "descripción": "Con salsa bolognesa"
+        "descripción": "Con salsa bolognesa. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "SorrentinosSalmon",
@@ -334,7 +334,7 @@ const dataProducts = [
         "categoria": "Pastas",
         "stock": 12,
         "img": "https://media.istockphoto.com/photos/home-sorrentinos-picture-id1134559822?k=20&m=1134559822&s=612x612&w=0&h=CwOzHkdenGSNBrBcll35zXfSDb-R-IvkQbSvUfRgy2c=",
-        "descripción": "Con salsa de tomate"
+        "descripción": "Con salsa de tomate. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {
         "url": "MilanesaNapolitanaParaDos",

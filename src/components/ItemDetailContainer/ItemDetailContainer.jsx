@@ -9,7 +9,7 @@ export default function ItemDetailContainer() {
     const url = useParams().url
     function getProduct() {
         return new Promise((resolve) => {
-            let productFilter = dataProducts.filter((item) => item.url === url)
+            let productFilter = dataProducts.find((item) => item.url == url)
             setTimeout(() => {
                 resolve(productFilter)
             }, 10);
