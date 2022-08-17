@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Contador from "../Contador/Contador"
 
 export default function PromoDetail({data}) {
-    const marginTop = {marginTop: '100px'}
+    const marginTop = {marginTop: '0px'}
     const link = {marginRight: '20px', textDecoration: 'none', }
     const hr = {margin: '0rem'}
     const total = Math.abs(data.precio * data.promo / 100 - data.precio)

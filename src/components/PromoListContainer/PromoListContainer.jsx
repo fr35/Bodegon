@@ -22,7 +22,7 @@ export default function PromoListContainer() {
     }, [])
 
     return (
-        <main className="container mt-5">
+        <main className="container mt-3">
             <h2 className="center pt-5">Promos</h2>
             <hr className='mb-4'/>
             <div className='row'>
