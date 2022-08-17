@@ -1,0 +1,44 @@
+import { Link } from "react-router-dom"
+import Contador from "../Contador/Contador"
+
+export default function PromoDetail({data}) {
+    const marginTop = {marginTop: '100px'}
+    const link = {marginRight: '20px', textDecoration: 'none', }
+    const hr = {margin: '0rem'}
+    const total = Math.abs(data.precio * data.promo / 100 - data.precio)
+    return (
+        <section className="container" style={marginTop}>
+            <div className="d-flex me-5">
+                <Link to={'/'} className='me-4 fst-italic text-decoration-none text-secondary'>
+                    <h6>Home</h6>
+                </Link>
+                <Link to={'/Promos'} className='me-4 fst-italic text-decoration-none text-secondary'>
+                    <h6>Promos</h6>
+                </Link>
+                <Link to={`/Categoria/${data.categoria}`} style={link}>
+                    <h6 className="fst-italic text-decoration-none text-secondary">{data.categoria}</h6>
+                </Link>
+            </div>
+            <hr style={hr}/>
+            <div className="row d-md-flex d-block mt-4">
+                <img src={data.img} alt={data.img} className='w-100 h-100 col center'></img>
+                <div className="col mt-1">
+                    <h2 className="center fw-bolder">{data.nombre}</h2>
+                    <p className="mt-3 center text-black-50">{data.descripción}</p>
+                    <h4 className="mt-1 center">
+                            <span class="text-muted text-decoration-line-through me-2">${data.precio}</span>
+                            ${total}
+                        </h4>
+                    <Contador stock={data.stock}/>
+                    <Link to={'/'} className='center'>
+                        <button className="btn btn-outline-dark mt-3">Agregar al Carrito</button>
+                    </Link>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}

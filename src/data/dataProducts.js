@@ -333,7 +333,7 @@ const dataProducts = [
         "precio": 1200,
         "categoria": "Pastas",
         "stock": 12,
-        "img": "https://media.istockphoto.com/photos/home-sorrentinos-picture-id1134559822?k=20&m=1134559822&s=612x612&w=0&h=CwOzHkdenGSNBrBcll35zXfSDb-R-IvkQbSvUfRgy2c=",
+        "img": "https://media.istockphoto.com/photos/dish-of-sorrentinos-pasta-stuffed-with-sauce-and-decorated-with-some-picture-id1035837534?k=20&m=1035837534&s=612x612&w=0&h=XCzAttewk1SkDsdmFyBZ6awHLTcmAS7AecE0MhOQWS8=",
         "descripción": "Con salsa de tomate. (En caso de querer cambiar la salsa dejelo en los comentarios)"
     }, 
     {

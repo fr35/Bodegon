@@ -1,6 +1,6 @@
 import { Background } from "../components/Background/Background";
 import CategoriasContainer from "../components/CategoriasContainer/CategoriasContainer";
-import PromoListContainer from "../components/Promo/PromoListContainer";
+import PromoListContainer from "../components/PromoListContainer/PromoListContainer";
 
 
 

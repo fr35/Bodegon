@@ -29,10 +29,13 @@ export default function NavBar() {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/reserva'} className="nav-link active">Reserva</Link>
+                            <Link to={'/Promos'} className="nav-link active">Promos</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/contacto'} className="nav-link active">Contacto</Link>
+                            <Link to={'/Reserva'} className="nav-link active">Reserva</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to={'/Contacto'} className="nav-link active">Contacto</Link>
                         </li>
                     </ul>
                 </div>
