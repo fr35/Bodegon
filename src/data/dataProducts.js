@@ -511,73 +511,73 @@ const dataProducts = [
     {
         "url": "CocaCola",
         "id": 51,
-        "nombre": "Coca Cola 500cc",
+        "nombre": "Coca Cola 473ml",
         "precio": 370,
         "categoria": "Bebidas",
         "stock": 15,
-        "img": "https://media.istockphoto.com/photos/simple-bottle-of-cola-with-red-cap-on-white-background-picture-id147913101?k=20&m=147913101&s=612x612&w=0&h=ikyqKbguas-dMM_rHTs90iSbo41W5-uoL2_gx9BRlS4=",
+        "img": "https://st.depositphotos.com/1364913/1200/i/600/depositphotos_12004559-stock-photo-coca-cola-can-with-cola.jpg",
         "descripción": "Coca cola 500cc"
     }, 
     {
         "url": "CocaColaZero",
         "id": 52,
-        "nombre": "Coca Cola Zero 500cc",
+        "nombre": "Coca Cola Zero 473ml",
         "precio": 370,
         "categoria": "Bebidas",
         "stock": 9,
-        "img": "https://media.istockphoto.com/photos/simple-bottle-of-cola-with-red-cap-on-white-background-picture-id147913101?k=20&m=147913101&s=612x612&w=0&h=ikyqKbguas-dMM_rHTs90iSbo41W5-uoL2_gx9BRlS4=",
-        "descripción": "Coca Cola Zero azucares 500cc"
+        "img": "https://st2.depositphotos.com/1029150/8188/i/600/depositphotos_81880932-stock-photo-coca-cola-zero.jpg",
+        "descripción": "Coca Cola Zero azucares 473ml"
     }, 
     {
         "url": "Fanta",
         "id": 53,
-        "nombre": "Fanta 500cc",
+        "nombre": "Fanta 473ml",
         "precio": 370,
         "categoria": "Bebidas",
         "stock": 14,
-        "img": "https://media.istockphoto.com/photos/orange-carbonated-soft-drink-in-glass-bottle-isolated-picture-id1157815003?k=20&m=1157815003&s=612x612&w=0&h=3EubPxptz5BjOzM2MgXKxLnxOZjPXwZGPlHNd7HrcuM=",
-        "descripción": "Fanta 500cc"
+        "img": "https://st4.depositphotos.com/1063437/38719/i/600/depositphotos_387196196-stock-photo-poznan-pol-jun-2020-can.jpg",
+        "descripción": "Fanta 473ml"
     }, 
     {
         "url": "Sprite",
         "id": 54,
-        "nombre": "Sprite 500cc",
+        "nombre": "Sprite 473ml",
         "precio": 370,
         "categoria": "Bebidas",
         "stock": 8,
-        "img": "https://media.istockphoto.com/photos/bottle-of-soda-with-straw-picture-id137072174?k=20&m=137072174&s=612x612&w=0&h=5mQeUaqRKhYggI5kLX86ZWw5cFT1hm2YaFLos-pGT1w=",
-        "descripción": "Sprite 500cc"
+        "img": "https://st.depositphotos.com/2121815/4264/i/600/depositphotos_42646587-stock-photo-can-of-sprite-drink-on.jpg",
+        "descripción": "Sprite 473ml"
     }, 
     {
         "url": "Corona",
         "id": 55,
         "promo": 10,
-        "nombre": "Cerveza Corona 330cc",
+        "nombre": "Cerveza Corona 330ml",
         "precio": 750,
         "categoria": "Bebidas",
         "stock": 4,
-        "img": "https://media.istockphoto.com/photos/pint-picture-id1164593695?k=20&m=1164593695&s=612x612&w=0&h=9HDjoyQM2UFVQFPGEB8lwDhchSJ9kOGUz0_RxmsL-QI=",
-        "descripción": "Cerveza rubia Corona 330cc"
+        "img": "https://st4.depositphotos.com/1063437/38056/i/600/depositphotos_380561332-stock-photo-poznan-pol-may-2020-bottle.jpg",
+        "descripción": "Cerveza rubia Corona 330ml"
     }, 
     {
         "url": "StellaArtois",
         "id": 56,
-        "nombre": "Cerveza Stella Artois Lata 473ml",
-        "precio": 600,
+        "nombre": "Cerveza Stella Artois 330ml",
+        "precio": 500,
         "categoria": "Bebidas",
         "stock": 5,
-        "img": "https://media.istockphoto.com/photos/beer-can-isolated-on-white-background-picture-id638577576?k=20&m=638577576&s=612x612&w=0&h=SCiA_RzvUYl_MBTHvyb77caZu4v9qvmHLUtFYXkWoeg=",
-        "descripción": "Cerveza rubia Stella Artois Lata 473ml"
+        "img": "https://st4.depositphotos.com/1006214/23036/i/600/depositphotos_230369118-stock-photo-irvine-california-march-2018-stella.jpg",
+        "descripción": "Cerveza rubia Stella Artois 330ml"
     }, 
     {
         "url": "Heineken",
         "id": 57,
-        "nombre": "Cerveza Heineken Lata 473ml",
-        "precio": 600,
+        "nombre": "Cerveza Heineken 330ml",
+        "precio": 500,
         "categoria": "Bebidas",
         "stock": 7,
-        "img": "https://media.istockphoto.com/photos/beer-can-isolated-on-white-background-picture-id638577576?k=20&m=638577576&s=612x612&w=0&h=SCiA_RzvUYl_MBTHvyb77caZu4v9qvmHLUtFYXkWoeg=",
-        "descripción": "Cerveza rubia Heineken Lata 473ml"
+        "img": "https://st3.depositphotos.com/36081542/37449/i/600/depositphotos_374494140-stock-photo-horizontal-shot-frosty-heineken-beer.jpg",
+        "descripción": "Cerveza rubia Heineken 330ml"
     }, 
     {
         "url": "Imperial",

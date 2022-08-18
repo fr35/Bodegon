@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import Contador from "../Contador/Contador"
 
 export default function PromoDetail({data}) {
-    const marginTop = {marginTop: '0px'}
+    const marginTop = {marginTop: '100px'}
     const link = {marginRight: '20px', textDecoration: 'none', }
     const hr = {margin: '0rem'}
     const total = Math.abs(data.precio * data.promo / 100 - data.precio)
@@ -29,14 +29,14 @@ export default function PromoDetail({data}) {
                     <h2 className="center fw-bolder">{data.nombre}</h2>
                     <p className="mt-3 center text-black-50">{data.descripción}</p>
                     <h4 className="mt-1 center">
-                            <span class="text-muted text-decoration-line-through me-2">${data.precio}</span>
+                            <span className="text-muted text-decoration-line-through me-2">${data.precio}</span>
                             ${total}
                         </h4>
                     <Contador stock={data.stock}/>
                     <div className="center"><button className="btn btn-outline-dark">Agregar al Carrito</button></div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label"></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..."></textarea>
+                    <div className="mb-3">
+                        <label htmlFor="comentarios" className="form-label"></label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                     </div>
                 </div>
             </div>

@@ -26,9 +26,9 @@ export default function ItemDetail({data}) {
                     <h4 className="center fw-bolder">${data.precio}</h4>
                     <Contador stock={data.stock}/>
                     <div className="center"><button className="btn btn-outline-dark">Agregar al Carrito</button></div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label"></label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..."></textarea>
+                    <div className="mt-3 ms- center">
+                        <label htmlFor="comentarios" className="form-label"></label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                     </div>
                 </div>
             </div>

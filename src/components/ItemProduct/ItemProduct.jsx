@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function ItemProduct({id,nombre, precio, img, stock, promo, descripción, url, categoria}) {
     const cardSize = {width: "300px"}
-    const imgSize = {Height: "200px"}
+    const imgSize = {Height: "200px", maxHeight: '200px'}
 
     return (
         <div className="col mb-5 center">

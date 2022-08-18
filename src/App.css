@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-header {
-  background-image: url("https://foodish-api.herokuapp.com/images/pizza/");
-}
 .center {
   display: flex;
   justify-content: center;
@@ -18,5 +15,11 @@ header {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  height: 690px;
 }
 
+#form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0px 100px;
+  
+}

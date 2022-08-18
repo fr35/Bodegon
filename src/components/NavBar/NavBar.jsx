@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 export default function NavBar() {
     const sinBorde = {border: 'none'}
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
                 <button className="navbar-toggler" style={sinBorde} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -40,8 +40,17 @@ export default function NavBar() {
                     </ul>
                 </div>
                 <div>
-                    <LogIn/>
-                    <Carrito/>
+                    <form className="d-inline p-2">
+                        <Link to={'/LogIn'} className="btn btn-outline-light" type="submit">
+                            Iniciar Sesión
+                        </Link>
+                    </form>
+                    <form className="d-inline p-2">
+                        <Link to={'/Carrito'} className="btn btn-outline-light" type="submit">
+                            <i className="bi-cart-fill"></i>
+                            <span className="badge bg-danger text-white ms-1 rounded-pill">0</span>
+                        </Link>
+                    </form>
                 </div>
             </div>
         </nav>
