@@ -13,7 +13,7 @@ export default function Registro() {
         address: ""
     })
     function inputChangeHandler(event) {
-
+        
     }
     return (
         <main id="background">

@@ -5,6 +5,9 @@ export default function ItemDetail({data}) {
     const marginTop = {marginTop: '100px'}
     const link = {marginRight: '20px', textDecoration: 'none', }
     const hr = {margin: '0rem'}
+    function handleAdd(cantidad) {
+        {console.log('agregaste', cantidad);}
+    }
     return (
         <section className="container" style={marginTop}>
             <div className="d-flex me-5">
@@ -24,8 +27,7 @@ export default function ItemDetail({data}) {
                     <h2 className="center fw-bolder">{data.nombre}</h2>
                     <p className="mt-3 center text-black-50">{data.descripción}</p>
                     <h4 className="center fw-bolder">${data.precio}</h4>
-                    <Contador stock={data.stock}/>
-                    <div className="center"><button className="btn btn-outline-dark">Agregar al Carrito</button></div>
+                    <Contador stock={data.stock} onAdd={handleAdd}/>
                     <div className="mt-3 ms- center">
                         <label htmlFor="comentarios" className="form-label"></label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
