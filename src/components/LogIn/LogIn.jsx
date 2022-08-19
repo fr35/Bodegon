@@ -1,32 +1,31 @@
-import { useState } from "react"
+import { useContext } from "react"
+import { userEmailContext } from "../../context/userEmailContext"
 import { Link } from "react-router-dom"
+import { userPasswordContext } from "../../context/userPasswordContext"
 
 export default function LogIn() {
-    
+    const {userEmail,setUserEmail} = useContext(userEmailContext)
+    const {userPassword, setUserPassword} = useContext(userPasswordContext)
     const top = {paddingTop: '150px'}
     const ancho = {width: '600px'}
-    function handleSumbit(event){event.preventDefault()}
-    const [userData, setUserData] = useState({
-        email : "",
-        password: "",
-    })
-    function inputChangeHandler(event) {
-        const input = event.target
-        const inputValue = input.value
-        const inputName = input.name
-        let copyUserData = {...userData}
-        copyUserData[inputName] = inputValue
-        setUserData(copyUserData)
+    function handleSumbit(event){
+        event.preventDefault()
+        let userAuth = true
+        let userInputEmail = event.target.elements[0].value
+        setUserEmail(userInputEmail)
+        let userInputPassword = event.target.elements[1].value
+        setUserPassword(userInputPassword)
     }
+    
     return (
         <main id="background">
             <div className="center" style={top}>
                 <form onSubmit={handleSumbit} id="form" style={ancho}>
                     <h2 className="text-white center mt-4">Iniciar Sesión</h2>
+                    <p className="text-white">{userEmail} {userPassword}</p>
                     <div className="">
                         <label htmlFor="email" className="form-label text-white"></label>
-                        <input onChange={inputChangeHandler} className="form-control" 
-                        value={userData.email}
+                        <input  className="form-control" 
                         type="email" 
                         name="email" 
                         placeholder="Email"/>
@@ -34,8 +33,6 @@ export default function LogIn() {
                     <div className="">
                         <label htmlFor="password" className="form-label text-white"></label>
                         <input className="form-control" 
-                        value={userData.password}
-                        onChange={inputChangeHandler} 
                         type="text" 
                         name="password" 
                         placeholder="Contraseña"/>

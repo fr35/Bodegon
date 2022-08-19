@@ -5,7 +5,7 @@ import dataProducts from "../../data/dataProducts";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 export default function ItemDetailContainer() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const url = useParams().url
     function getProduct() {
         return new Promise((resolve) => {

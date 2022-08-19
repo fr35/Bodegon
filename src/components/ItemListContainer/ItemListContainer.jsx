@@ -5,7 +5,7 @@ import dataProducts from "../../data/dataProducts";
 import ItemList from "../ItemList/ItemList";
 
 export default function ItemListContainer() {
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const nombreCategoria = useParams().nombreCategoria
     function getProduct() {
         return new Promise((resolve) => {
