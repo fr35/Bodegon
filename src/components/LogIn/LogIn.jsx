@@ -1,13 +1,13 @@
-import { useContext } from "react"
-import { userEmailContext } from "../../context/userEmailContext"
 import { Link } from "react-router-dom"
-import { userPasswordContext } from "../../context/userPasswordContext"
+import { useContext } from "react"
+import { userEmailContext } from "../../context/UserEmailContext/userEmailContext"
+import { userPasswordContext } from "../../context/UserPasswordContext/userPasswordContext"
 
 export default function LogIn() {
-    const {userEmail,setUserEmail} = useContext(userEmailContext)
-    const {userPassword, setUserPassword} = useContext(userPasswordContext)
     const top = {paddingTop: '150px'}
     const ancho = {width: '600px'}
+    const {userEmail,setUserEmail} = useContext(userEmailContext)
+    const {userPassword, setUserPassword} = useContext(userPasswordContext)
     function handleSumbit(event){
         event.preventDefault()
         let userAuth = true
@@ -22,7 +22,6 @@ export default function LogIn() {
             <div className="center" style={top}>
                 <form onSubmit={handleSumbit} id="form" style={ancho}>
                     <h2 className="text-white center mt-4">Iniciar Sesión</h2>
-                    <p className="text-white">{userEmail} {userPassword}</p>
                     <div className="">
                         <label htmlFor="email" className="form-label text-white"></label>
                         <input  className="form-control" 

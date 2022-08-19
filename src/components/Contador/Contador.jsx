@@ -23,7 +23,7 @@ export default function Contador( {stock, onAdd} ) {
                 <button onClick={sumar} className='btn' style={sinBordes}>+</button>
             </div>
             <div className="center">
-                <Link to={'/Carrito'} className="btn btn-outline-dark" onClick={() => onAdd(cantidad)}>Agregar al Carrito</Link>
+                <button to={'/Carrito'} className="btn btn-outline-dark" onClick={() => onAdd(cantidad)}>Agregar al Carrito</button>
             </div>
         </div>
     )

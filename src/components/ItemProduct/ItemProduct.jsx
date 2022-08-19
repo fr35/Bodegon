@@ -19,4 +19,3 @@ export default function ItemProduct({id,nombre, precio, img, stock, promo, descr
         </div>
     )
 }
-

@@ -21,7 +21,18 @@ export default function ItemDetailContainer() {
 
     return (
         <main>
-            <ItemDetail data={data}/>
+            <ItemDetail
+                key={data.id}
+                nombre={data.nombre}
+                precio={data.precio}
+                img={data.img}
+                stock={data.stock}
+                promo={data.promo}
+                id={data.id}
+                descripción={data.descripción}
+                categoria={data.categoria}
+                url={data.url}
+            />
         </main>
     )
 }

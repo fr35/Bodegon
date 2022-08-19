@@ -2,6 +2,7 @@ import ItemProduct from "../ItemProduct/ItemProduct"
 
 export default function ItemList({data}) {
     return (
+        
         data.map((product) => {
             return (
                 <ItemProduct
