@@ -22,7 +22,7 @@ export default function ItemListContainer() {
     }, [nombreCategoria])
 
     return (
-        <main className="container mt-3">
+        <main className="container mt-5">
             <h2 className="center pt-5">{nombreCategoria}</h2>
             <hr className='mb-4'/>
             <div className='row'>

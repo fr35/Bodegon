@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import dataProducts from "../../data/dataProducts";
 import ItemList from "../ItemList/ItemList";
-import PromoList from "../PromoList/PromoList";
+
 
 export default function PromoListContainer() {
     const [data, setData] = useState([])
@@ -22,11 +22,11 @@ export default function PromoListContainer() {
     }, [])
 
     return (
-        <main className="container mt-3">
+        <main className="container mt-5">
             <h2 className="center pt-5">Promos</h2>
             <hr className='mb-4'/>
             <div className='row'>
-                <PromoList data={data}/>
+                <ItemList data={data}/>
             </div>
         </main>
     )

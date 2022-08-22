@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Contador( {stock, onAdd} ) {
     const sinBordes = {border: "none"}
@@ -25,6 +24,7 @@ export default function Contador( {stock, onAdd} ) {
             <div className="center">
                 <button to={'/Carrito'} className="btn btn-outline-dark" onClick={() => onAdd(cantidad)}>Agregar al Carrito</button>
             </div>
+            <p className="center mt-1">Stock: {stock}</p>
         </div>
     )
 }
