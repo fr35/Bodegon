@@ -58,9 +58,9 @@ export default function CartContainer() {
                     </div>
                     <div className="row">
                         <div className="col d-block d-md-flex justify-content-around">
-                            <h6>Nombre: Facundo Rdriguez</h6>
-                            <h6>Domicilio: Vidla 123 6b</h6>
-                            <h6>Telefono: 11698178</h6>
+                            <h6>Nombre:</h6>
+                            <h6>Domicilio: </h6>
+                            <h6>Telefono:</h6>
                         </div>
                     </div>
                     <div className="center mt-3 mb-3">
