@@ -4,19 +4,19 @@ export default function CartItem({ id ,img, nombre, precio, precioTotal, cantida
     const sinBordes = {border: "none"}
     const borde = {borderStyle: 'ridge'}
     const [quantity, setQuantity] = useState(cantidad)
-    const [totalPrice, setTotalPrice] = useState(precioTotal)
+    const [price, setPrice] = useState(precio)
+    
     const sumar = () => {
         if (quantity < stock) {
-            cantidad+=1
-            setQuantity(cantidad)
+            setQuantity(quantity + 1)
         }
     }
     const restar = () => {
         if (quantity > 1) {
-            cantidad-=1
-            setQuantity(cantidad)
+            setQuantity(quantity - 1)
         }
     }
+    const precioNuevo = precio * quantity
     return (
         <div className="row mb-1 text-center center ms-0 container" style={borde}>
                 <div className="col">
@@ -39,7 +39,7 @@ export default function CartItem({ id ,img, nombre, precio, precioTotal, cantida
                     <p className="">Por Unidad</p>
                 </div>
                 <div className="col mt-3">
-                    <h5 className="fw-bolder">${precioTotal}</h5>
+                    <h5 className="fw-bolder">${precioNuevo}</h5>
                     <p className="">Total</p>
                 </div>
                 <div className="col">

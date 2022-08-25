@@ -6,14 +6,16 @@ import { cartContext } from "../../../context/CartContext/cartContext"
 import CartItem from "../CartItem/CartItem"
 import MediosDePago from "../MediosDePago/MediosDePago"
 
-export default function CartContainer() {
+export default function CartContainer({precioNuevo}) {
     const empty = {marginTop: '100px', marginBottom: '250px'}
     const marginTop = {marginTop: '100px'}
     const borde = {borderStyle: 'ridge'}
     const {cart, removeItemInCart, precioTotalEnCarrito, removeAll} = useContext(cartContext)
+    console.log(cart);
     function removeItem(id) {
         removeItemInCart(id)
     }
+    console.log(precioNuevo);
     useEffect(()=> {}, [cart])
 
     if (cart.length === 0) {
@@ -53,7 +55,7 @@ export default function CartContainer() {
                     <div className="row">
                         <div className="col d-md-flex justify-content-around mt-3 mb-3">
                             <h4 className="">Resumen</h4>
-                            <h4 className="">Total a pagar: ${precioTotalEnCarrito()}</h4>
+                            <h4 className="">Total a pagar: ${}</h4>
                         </div>
                     </div>
                     <div className="row">
