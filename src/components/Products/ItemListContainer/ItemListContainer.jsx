@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import dataProducts from "../../data/dataProducts";
+import dataProducts from "../../../data/dataProducts";
 import ItemList from "../ItemList/ItemList";
+import { Ring } from '@uiball/loaders'
 
 export default function ItemListContainer() {
     const [data, setData] = useState([])
@@ -11,7 +12,7 @@ export default function ItemListContainer() {
         return new Promise((resolve) => {
             setTimeout(() => {
                 resolve(dataProducts)
-            }, 10);
+            }, 1000);
         })
     }
     useEffect(() => {
@@ -26,7 +27,14 @@ export default function ItemListContainer() {
             <h2 className="center pt-5">{nombreCategoria}</h2>
             <hr className='mb-4'/>
             <div className='row'>
-                <ItemList data={data}/>
+            {data.length === 0 ? (<Ring 
+                        size={50}
+                        lineWeight={5}
+                        speed={2} 
+                        color="black" 
+                    />) : 
+                    (
+                    <ItemList data={data}/>)}
             </div>
         </main>
     )

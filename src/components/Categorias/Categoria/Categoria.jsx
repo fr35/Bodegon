@@ -4,7 +4,7 @@ export default function Categoria({nombreCategoria, img}) {
     const sinBorde = {border: 'none'}
 
     return (
-        <Link to={`/Categoria/${nombreCategoria}`} className="col btn btn-outline-dark" style={sinBorde}>
+        <Link to={`/Categoria/${nombreCategoria}`} className="col col-lg-2 col-md-4 col-6 btn btn-outline-dark" style={sinBorde}>
                 <img src={img} alt={img} className='mt-2' style={circle}/>
                 <h6 className="mt-2">{nombreCategoria}</h6>
         </Link>

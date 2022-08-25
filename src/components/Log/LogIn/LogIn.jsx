@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react"
-import { userEmailContext } from "../../context/UserEmailContext/userEmailContext"
-import { userPasswordContext } from "../../context/UserPasswordContext/userPasswordContext"
+import { userEmailContext } from "../../../context/UserEmailContext/userEmailContext"
+import { userPasswordContext } from "../../../context/UserPasswordContext/userPasswordContext"
 
 export default function LogIn() {
     const top = {paddingTop: '150px'}
@@ -32,7 +32,7 @@ export default function LogIn() {
                     <div className="">
                         <label htmlFor="password" className="form-label text-white"></label>
                         <input className="form-control" 
-                        type="text" 
+                        type="password" 
                         name="password" 
                         placeholder="Contraseña"/>
                     </div>

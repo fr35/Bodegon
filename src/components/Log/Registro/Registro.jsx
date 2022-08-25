@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { userEmailContext } from "../../context/UserEmailContext/userEmailContext"
-import { userPasswordContext } from "../../context/UserPasswordContext/userPasswordContext"
-import { userNameContext } from "../../context/UserNameContext/userNameContext"
-import { userPhoneContext } from "../../context/UserPhoneContext/userPhoneContext"
-import { userAdressContext } from "../../context/UserAdressContext/userAdressContext"
+import { userEmailContext } from "../../../context/UserEmailContext/userEmailContext"
+import { userPasswordContext } from "../../../context/UserPasswordContext/userPasswordContext"
+import { userNameContext } from "../../../context/UserNameContext/userNameContext"
+import { userPhoneContext } from "../../../context/UserPhoneContext/userPhoneContext"
+import { userAdressContext } from "../../../context/UserAdressContext/userAdressContext"
 
 export default function Registro() {
     const top = {paddingTop: '150px'}
@@ -42,7 +42,7 @@ export default function Registro() {
                     </div>
                     <div>
                         <label htmlFor="password" className="form-label text-white"></label>
-                        <input type="text" name="password" className="form-control" placeholder="Contraseña"/>
+                        <input type="password" name="password" className="form-control" placeholder="Contraseña"/>
                     </div>
                     <div>
                         <label htmlFor="phone" className="form-label text-white"></label>

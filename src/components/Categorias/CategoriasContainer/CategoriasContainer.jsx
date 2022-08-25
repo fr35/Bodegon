@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import dataCategorias from "../../data/dataCategoria";
+import dataCategorias from "../../../data/dataCategoria";
 import CategoryList from "../CategoriaList/CategoriaList";
 
 export default function CategoriasContainer() {

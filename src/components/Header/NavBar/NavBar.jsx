@@ -1,10 +1,10 @@
-import LogIn from "../LogIn/LogIn";
-import Carrito from "../Carrito/Carrito";
+import { useContext } from "react";
 import {Link} from "react-router-dom";
-
+import { cartContext } from "../../../context/CartContext/cartContext";
 
 export default function NavBar() {
     const sinBorde = {border: 'none'}
+    const {cart, cantidadTotal} = useContext(cartContext)
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
@@ -48,7 +48,7 @@ export default function NavBar() {
                     <form className="d-inline p-2">
                         <Link to={'/Carrito'} className="btn btn-outline-light" type="submit">
                             <i className="bi-cart-fill"></i>
-                            <span className="badge bg-danger text-white ms-1 rounded-pill">0</span>
+                            {cart.length === 0 ? (<span></span>):(<span className="badge bg-danger text-white ms-1 rounded-pill">{cantidadTotal()}</span>)}
                         </Link>
                     </form>
                 </div>

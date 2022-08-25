@@ -1,6 +1,6 @@
-import { Background } from "../components/Background/Background";
-import CategoriasContainer from "../components/CategoriasContainer/CategoriasContainer";
-import PromoListContainer from "../components/PromoListContainer/PromoListContainer";
+import { Background } from "../components/Header/Background/Background";
+import CategoriasContainer from "../components/Categorias/CategoriasContainer/CategoriasContainer";
+import PromoListContainer from "../components/Products/PromoListContainer/PromoListContainer";
 
 
 

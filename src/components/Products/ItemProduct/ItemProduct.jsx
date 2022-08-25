@@ -8,7 +8,7 @@ export default function ItemProduct({id,nombre, precio, img, stock, promo, descr
     const total = Math.abs(precio * promo / 100 - precio)
 
     return (
-        <div className="col col-6 col-sm-3 mb-5 center">
+        <div className="col col-lg-4 mb-5 center">
             <div className="card box h-100" style={cardSize}>
                 <img className="card-img-top" src={img} alt={nombre} style={imgSize}/>
                     <div className="mt-auto text-center">

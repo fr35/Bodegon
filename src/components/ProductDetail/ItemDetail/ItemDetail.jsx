@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { cartContext } from "../../context/CartContext/cartContext";
+import { cartContext } from "../../../context/CartContext/cartContext";
 import Contador from "../Contador/Contador";
+
 
 export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
     const link = {marginRight: '20px', textDecoration: 'none'}
     const hr = {margin: '0rem'}
+
     const hayPromo = promo !== undefined
     const total = Math.abs(precio * promo / 100 - precio)
+
     const {addToCart} = useContext(cartContext)
+    const [cantidadAlCarrito, setCantidadAlCarrito] = useState(0)
     function handleAdd(cantidad) {
         const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria}
         addToCart(itemToCart, cantidad)
+        setCantidadAlCarrito(cantidad)
     }
 
     return (
@@ -38,13 +43,16 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                                     <span className="text-muted text-decoration-line-through me-2">${precio}</span>
                                     ${total}
                                 </h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
-                    <Contador stock={stock} onAdd={handleAdd}/>
+                    {cantidadAlCarrito === 0 ? (<Contador stock={stock} min={1} onAdd={handleAdd}/>) 
+                    : (<Contador stock={stock} min={1} onAdd={handleAdd}/>)}
+                    <p className="center mt-2">Stock: {stock}</p>
                     <div>
                         <label htmlFor="comentarios" className="form-label"></label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                     </div>
                 </div>
             </div>
+            
         </section>
     )
 }
