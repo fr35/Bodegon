@@ -3,16 +3,18 @@ import { useState } from "react"
 export default function CartItem({ id ,img, nombre, precio, precioTotal, cantidad, categoria, stock, removeItem}) {
     const sinBordes = {border: "none"}
     const borde = {borderStyle: 'ridge'}
+    const [quantity, setQuantity] = useState(cantidad)
+    const [totalPrice, setTotalPrice] = useState(precioTotal)
     const sumar = () => {
-        if (cantidad < stock) {
+        if (quantity < stock) {
             cantidad+=1
-            console.log(cantidad);
+            setQuantity(cantidad)
         }
     }
     const restar = () => {
-        if (cantidad > 1) {
+        if (quantity > 1) {
             cantidad-=1
-            precioTotal = precio * cantidad
+            setQuantity(cantidad)
         }
     }
     return (
@@ -27,7 +29,7 @@ export default function CartItem({ id ,img, nombre, precio, precioTotal, cantida
                 <div className="col mt-2">
                     <div className="center">
                         <button className='btn' style={sinBordes} onClick={restar}>-</button>             
-                        <h6 className="mt-2">{cantidad}</h6>
+                        <h6 className="mt-2">{quantity}</h6>
                         <button className='btn' style={sinBordes} onClick={sumar}>+</button>
                     </div>
                     <p className="center mt-1">Stock:{stock}</p>
@@ -41,7 +43,7 @@ export default function CartItem({ id ,img, nombre, precio, precioTotal, cantida
                     <p className="">Total</p>
                 </div>
                 <div className="col">
-                    <button className="btn btn-danger" onClick={()=> removeItem(id)}>X</button>
+                    <button className="btn btn-danger pe-3 pb-2 pt-2 ps-3" onClick={()=> removeItem(id)}>X</button>
                 </div>
             </div>
     )
