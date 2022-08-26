@@ -20,7 +20,7 @@ export default function NavBar() {
                         <li className="nav-item dropdown" id="navbarNavDarkDropdown">
                             <a className="nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú</a>
                             <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link to={'/Categoria/Guarniciones'} className="dropdown-item">Guarniciones</Link></li>
+                                <li><Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link></li>
                                 <li><Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link></li>
                                 <li><Link to={'/Categoria/Pastas'} className="dropdown-item">Pastas</Link></li>
                                 <li><Link to={'/Categoria/Minutas'} className="dropdown-item">Minutas</Link></li>
@@ -40,17 +40,15 @@ export default function NavBar() {
                     </ul>
                 </div>
                 <div>
-                    <form className="d-inline p-2">
-                        <Link to={'/LogIn'} className="btn btn-outline-light" type="submit">
-                            Iniciar Sesión
-                        </Link>
-                    </form>
-                    <form className="d-inline p-2">
-                        <Link to={'/Carrito'} className="btn btn-outline-light" type="submit">
+                    <div className="d-inline p-2">
+                        <Link to={'/LogIn'} className="btn btn-outline-light" type="submit" style={sinBorde}>Iniciar Sesión</Link>
+                    </div>
+                    <div className="d-inline p-2">
+                        <Link to={'/Carrito'} className="btn btn-outline-light" type="submit" style={sinBorde}>
                             <i className="bi-cart-fill"></i>
                             {cart.length === 0 ? (<span></span>):(<span className="badge bg-danger text-white ms-1 rounded-pill">{cantidadTotal()}</span>)}
                         </Link>
-                    </form>
+                    </div>
                 </div>
             </div>
         </nav>

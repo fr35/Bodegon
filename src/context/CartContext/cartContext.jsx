@@ -1,5 +1,4 @@
 import { createContext, useState } from 'react'
-import Swal from 'sweetalert2' 
 
 export const cartContext = createContext()
 export function CartContextProvider ({children}) {
@@ -21,9 +20,6 @@ export function CartContextProvider ({children}) {
                 itemId.cantidad += cantidad;
                 item.stock -= cantidad
                 setCart(copyCart)
-            }
-            else{
-                <p>no hay stock</p>
             }
         }
         else {
@@ -51,8 +47,15 @@ export function CartContextProvider ({children}) {
         return cantidadEnCarito;
     }
     
+    function precioTotalEnCarrito(){
+        let precioTotalEnCarrito = 0;
+        copyCart.map ((item) => precioTotalEnCarrito += item.precio * item.cantidad);
+        return precioTotalEnCarrito;
+    }
+    console.log(cart)
+    
     return (
-        <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal}}>
+        <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal, precioTotalEnCarrito}}>
             {children}
         </cartContext.Provider>
     )

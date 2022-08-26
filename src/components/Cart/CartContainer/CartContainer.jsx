@@ -6,16 +6,13 @@ import { cartContext } from "../../../context/CartContext/cartContext"
 import CartItem from "../CartItem/CartItem"
 import MediosDePago from "../MediosDePago/MediosDePago"
 
-export default function CartContainer({precioNuevo}) {
+export default function CartContainer() {
     const empty = {marginTop: '100px', marginBottom: '250px'}
     const marginTop = {marginTop: '100px'}
-    const borde = {borderStyle: 'ridge'}
-    const {cart, removeItemInCart, precioTotalEnCarrito, removeAll} = useContext(cartContext)
-    console.log(cart);
+    const {cart, removeItemInCart, removeAll, precioTotalEnCarrito, cantidadTotal} = useContext(cartContext)
     function removeItem(id) {
         removeItemInCart(id)
     }
-    console.log(precioNuevo);
     useEffect(()=> {}, [cart])
 
     if (cart.length === 0) {
@@ -32,44 +29,50 @@ export default function CartContainer({precioNuevo}) {
     } 
     else {
         return (
-            <main className="container" style={marginTop}>
-                <h3 className="center mb-2">Carrito</h3>
-                <hr className="mb-4"/>
-                {cart.map((item) => {
-                    return (
-                        <CartItem
-                            key={item.id}
-                            id={item.id}
-                            img={item.img}
-                            nombre={item.nombre}
-                            precio={item.precio}
-                            precioTotal={item.precio * item.cantidad}
-                            cantidad={item.cantidad}
-                            categoria={item.categoria}
-                            stock={item.stock}
-                            removeItem={removeItem}
-                        />
-                    )
-                })}
-                <div style={borde} className='container row center mb-3 mt-3 ms-0'>
-                    <div className="row">
-                        <div className="col d-md-flex justify-content-around mt-3 mb-3">
-                            <h4 className="">Resumen</h4>
-                            <h4 className="">Total a pagar: ${}</h4>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col d-block d-md-flex justify-content-around">
-                            <h6>Nombre:</h6>
-                            <h6>Domicilio: </h6>
-                            <h6>Telefono:</h6>
-                        </div>
-                    </div>
-                    <div className="center mt-3 mb-3">
-                        <button className="btn btn-outline-dark me-1" onClick={removeAll}>Vaciar Carrito</button>
-                        <button className="btn btn-outline-dark ms-1">Comprar</button>
-                    </div>
-                    <MediosDePago/>
+            <main style={marginTop}>
+                <h3 className="mb-2 center">Carrito</h3>
+                <hr className="mb-2"/>
+                <div className="table-responsive">
+                    <table class="table text-center text-nowrap">
+                        <thead>
+                            <tr>
+                                <th scope="col">Miniatura</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cart.map((item) => {
+                                return (
+                                    <CartItem
+                                        key={item.id}
+                                        id={item.id}
+                                        img={item.img}
+                                        nombre={item.nombre}
+                                        precio={item.precio}
+                                        precioTotal={item.precio * item.cantidad}
+                                        cantidad={item.cantidad}
+                                        categoria={item.categoria}
+                                        stock={item.stock}
+                                        removeItem={removeItem}
+                                    />
+                                    )
+                                })}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="col">Resumen</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col">{cantidadTotal()}</th>
+                                <th scope="col">$ {precioTotalEnCarrito()}</th>
+                                <th scope="col"><button className="btn btn-danger" onClick={()=> removeAll()}>Vaciar</button></th>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </main>
         )
