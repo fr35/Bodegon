@@ -76,9 +76,9 @@ export default function CartContainer() {
                 <div className="card">
                     <h4 className="mt-2 center">Detalle de facturación</h4>
                     <div className="d-flex justify-content-around mt-2 mb-2">
-                        <p>Nombre: Facundo</p>
-                        <p>Teléfono: 116971891</p>
-                        <p>Dirección: Videla 134</p>
+                        <p>Nombre: </p>
+                        <p>Teléfono: </p>
+                        <p>Dirección:</p>
                     </div>
                     <div className="center mb-4">
                         <button className="btn btn-outline-dark">Finalizar Compra</button>
