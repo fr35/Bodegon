@@ -31,10 +31,9 @@ export default function CartContainer() {
         return (
             <main style={marginTop}>
                 <h3 className="mb-2 center">Carrito</h3>
-                <hr className="mb-2"/>
                 <div className="table-responsive">
-                    <table class="table text-center text-nowrap">
-                        <thead>
+                    <table className="table text-center text-nowrap table-hover ">
+                        <thead className="">
                             <tr>
                                 <th scope="col">Miniatura</th>
                                 <th scope="col">Nombre</th>
@@ -67,12 +66,24 @@ export default function CartContainer() {
                                 <th scope="col">Resumen</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
-                                <th scope="col">{cantidadTotal()}</th>
+                                <th scope="col"></th>
                                 <th scope="col">$ {precioTotalEnCarrito()}</th>
                                 <th scope="col"><button className="btn btn-danger" onClick={()=> removeAll()}>Vaciar</button></th>
                             </tr>
                         </tfoot>
                     </table>
+                </div>
+                <div className="card">
+                    <h4 className="mt-2 center">Detalle de facturación</h4>
+                    <div className="d-flex justify-content-around mt-2 mb-2">
+                        <p>Nombre: Facundo</p>
+                        <p>Teléfono: 116971891</p>
+                        <p>Dirección: Videla 134</p>
+                    </div>
+                    <div className="center mb-4">
+                        <button className="btn btn-outline-dark">Finalizar Compra</button>
+                    </div>
+                    <p className="center">(Para realizar la compra debe haber inicado sesión. En caso de no haberlo hecho haga click <Link to={'/LogIn'}>aquí</Link>)</p>
                 </div>
             </main>
         )

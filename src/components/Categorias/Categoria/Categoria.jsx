@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom'
+import {React} from 'react'
 export default function Categoria({nombreCategoria, img}) {
     const circle = {borderRadius: "50%", height: "150px", width: "150px"}
     const sinBorde = {border: 'none'}

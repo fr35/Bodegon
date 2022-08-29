@@ -1,20 +1,10 @@
-import { useContext } from "react"
-import { userAdressContext } from "../../context/UserAdressContext/userAdressContext"
-import { userEmailContext } from "../../context/UserEmailContext/userEmailContext"
-import { userNameContext } from "../../context/UserNameContext/userNameContext"
-import { userPhoneContext } from "../../context/UserPhoneContext/userPhoneContext"
+
 
 
 export default function Footer() {
     const link = {textDecoration: 'none', color: 'white'}
     const ul = {listStyleType: 'none', margin: '0', padding: '0'}
     const marginBottom = {marginBottom: '10px'}
-    const {userEmail} = useContext(userEmailContext)
-    const {userName} = useContext(userNameContext)
-    const {userPhone} = useContext(userPhoneContext)
-    const {userAdress} = useContext(userAdressContext)
-    
-    
     return (
         <footer className="bg-dark">
             <div className="container text-white">

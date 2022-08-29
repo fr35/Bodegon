@@ -1,26 +1,13 @@
 import { Link } from "react-router-dom"
-import { useContext } from "react"
-import { userEmailContext } from "../../../context/UserEmailContext/userEmailContext"
-import { userPasswordContext } from "../../../context/UserPasswordContext/userPasswordContext"
+
 
 export default function LogIn() {
     const top = {paddingTop: '150px'}
     const ancho = {width: '600px'}
-    const {userEmail,setUserEmail} = useContext(userEmailContext)
-    const {userPassword, setUserPassword} = useContext(userPasswordContext)
-    function handleSumbit(event){
-        event.preventDefault()
-        let userAuth = true
-        let userInputEmail = event.target.elements[0].value
-        setUserEmail(userInputEmail)
-        let userInputPassword = event.target.elements[1].value
-        setUserPassword(userInputPassword)
-    }
-    
     return (
         <main id="background">
             <div className="center" style={top}>
-                <form onSubmit={handleSumbit} id="form" style={ancho}>
+                <form id="form" style={ancho}>
                     <h2 className="text-white center mt-4">Iniciar Sesión</h2>
                     <div className="">
                         <label htmlFor="email" className="form-label text-white"></label>

@@ -24,7 +24,7 @@ export default function ItemProduct({id,nombre, precio, img, stock, promo, descr
                         ) : (
                         <h4 className="mt-1">${precio}</h4>
                         )}
-                        <Link to={`/${categoria}/${url}`}>
+                        <Link to={`/${categoria}/${id}`}>
                             <button className="btn btn-outline-dark mt-2 mb-3">Ver más</button>
                         </Link>
                     </div>

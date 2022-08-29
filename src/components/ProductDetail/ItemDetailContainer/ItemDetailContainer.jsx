@@ -1,24 +1,29 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import dataProducts from "../../../data/dataProducts";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import dataBase from '../../../services/firebase'
+import {collection, getDoc, doc} from "firebase/firestore";
 
 export default function ItemDetailContainer() {
-    const [data, setData] = useState({})
-    const url = useParams().url
-    function getProduct() {
+    const [data, setData] = useState([])
+    const id = useParams().id
+    function getDetailById(id) {
         return new Promise((resolve) => {
-            let productFilter = dataProducts.find((item) => item.url == url)
-            setTimeout(() => {
-                resolve(productFilter)
-            }, 10);
+            const productCollectionRef = collection(dataBase, "menu")
+            const docRef = doc(productCollectionRef, id)
+            getDoc(docRef).then(snapshot => {
+                resolve (
+                    {...snapshot.data(), id: snapshot.id}
+                )
+            })
         })
     }
-    useEffect(() => {
-        getProduct().then((product) => setData(product))
-    }, [])
-
+    useEffect(()=> {
+        getDetailById(id).then(response => {
+            setData(response)
+        })
+    }, [id])
     return (
         <main>
             <ItemDetail

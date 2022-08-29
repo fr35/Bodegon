@@ -1,17 +1,24 @@
-import { useEffect } from "react";
 import { useState } from "react";
-import dataCategorias from "../../../data/dataCategoria";
+import { useEffect } from "react";
 import CategoryList from "../CategoriaList/CategoriaList";
+import dataBase from '../../../services/firebase'
+import { getDocs, collection} from "firebase/firestore";
 
 export default function CategoriasContainer() {
     const [categoria, setCategoria] = useState([])
-    function getCategoria() {
+    function getCategory() {
         return new Promise((resolve) => {
-                resolve(dataCategorias)
+            const categoryCollection = collection(dataBase, "categorias")
+            getDocs(categoryCollection).then(snapshot => {
+            const docsData = snapshot.docs.map(doc => {
+                return {...doc.data(), id: doc.id}
+            })
+            resolve(docsData)
         })
-    }
+        })
+    }  
     useEffect(() => {
-        getCategoria().then(categoria => {
+        getCategory().then(categoria => {
             setCategoria(categoria)
         })
     },[])
