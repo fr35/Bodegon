@@ -52,7 +52,6 @@ export function CartContextProvider ({children}) {
         copyCart.map ((item) => precioTotalEnCarrito += item.precio * item.cantidad);
         return precioTotalEnCarrito;
     }
-    console.log(cart)
     
     return (
         <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal, precioTotalEnCarrito}}>

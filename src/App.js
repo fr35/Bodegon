@@ -10,28 +10,28 @@ import Registro from './components/Log/Registro/Registro';
 import Footer from './components/Footer/Footer';
 import { CartContextProvider } from './context/CartContext/cartContext';
 import CartContainer from './components/Cart/CartContainer/CartContainer';
-import dataBase from './services/firebase'
-
-
+import { UserDataContextProvider } from './context/UserContext/userContext';
 
 
 function App() {
   return (
     <BrowserRouter>
+      <UserDataContextProvider>
       <CartContextProvider>
-        <NavBar/>
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/Categoria/:nombreCategoria' element={<ItemListContainer/>}/>
-            <Route path='/:Categoria/:id' element={<ItemDetailContainer/>}/>
-            <Route path='/Promos' element={<PromoListContainer/>}/>
-            <Route path='/Promos/:Categoria/:url' element={<ItemDetailContainer/>}/>
-            <Route path='/LogIn' element={<LogIn/>}/>
-            <Route path='/LogIn/Registro' element={<Registro/>}/>
-            <Route path='/Carrito' element={<CartContainer/>}/>
-          </Routes>
-        <Footer/>
+          <NavBar/>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/Categoria/:nombreCategoria' element={<ItemListContainer/>}/>
+              <Route path='/:Categoria/:id' element={<ItemDetailContainer/>}/>
+              <Route path='/Promos' element={<PromoListContainer/>}/>
+              <Route path='/Promos/:Categoria/:url' element={<ItemDetailContainer/>}/>
+              <Route path='/LogIn' element={<LogIn/>}/>
+              <Route path='/LogIn/Registro' element={<Registro/>}/>
+              <Route path='/Carrito' element={<CartContainer/>}/>
+            </Routes>
+          <Footer/>
       </CartContextProvider>
+      </UserDataContextProvider>
     </BrowserRouter>
   )
 }

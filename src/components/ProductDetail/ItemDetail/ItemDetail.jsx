@@ -44,7 +44,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                         <span className="text-muted text-decoration-line-through me-2">${precio}</span>${total}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
                     {cantidadAlCarrito === 0 ? 
                     (<Contador stock={stock} min={1} onAdd={handleAdd}/>) 
-                    : (<Contador stock={stock} min={1} onAdd={handleAdd}/>)}
+                    : (<Link className="center btn btn-outline-dark" to={'/Carrito'}>Ir al carrito</Link>)}
                     <p className="center mt-2">Stock: {stock}</p>
                     <label htmlFor="comentarios" className="form-label"></label><textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                 </div>
