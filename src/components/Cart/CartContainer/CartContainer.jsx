@@ -8,7 +8,6 @@ import { userDataContext } from "../../../context/UserContext/userContext"
 import UserInfo from "../UserInfo/UserInfo"
 
 export default function CartContainer() {
-    const {userName, setUserName, userEmail, setUserEmail, userPassword, setUserPassword, userPhone, setUserPhone, userAdress, setUserAdress} = useContext(userDataContext)
     const empty = {marginTop: '100px', marginBottom: '250px'}
     const marginTop = {marginTop: '100px'}
     const {cart, removeItemInCart, removeAll, precioTotalEnCarrito} = useContext(cartContext)
@@ -74,7 +73,7 @@ export default function CartContainer() {
                         </tfoot>
                     </table>
                 </div>
-                <UserInfo cart={cart} total={precioTotalEnCarrito()}/>
+                <UserInfo cart={cart} total={precioTotalEnCarrito()} removeAll={()=>removeAll()}/>
                 <MediosDePago/>
             </main>
         )

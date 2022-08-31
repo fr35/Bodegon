@@ -12,7 +12,6 @@ import { CartContextProvider } from './context/CartContext/cartContext';
 import CartContainer from './components/Cart/CartContainer/CartContainer';
 import { UserDataContextProvider } from './context/UserContext/userContext';
 
-
 function App() {
   return (
     <BrowserRouter>
