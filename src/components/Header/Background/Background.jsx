@@ -1,6 +1,6 @@
 
 export function Background() { 
     return (
-        <img src='fotos/bodegon.jpeg' className="img-fluid w-100"/>
+        <img src='fotos/bodegon.jpeg' alt='background' className="img-fluid w-100"/>
     )
 }
