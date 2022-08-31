@@ -15,7 +15,7 @@ export default function NavBar() {
                     <div className="navbar-nav">
                         <Link to={'/'} className="nav-link active">Inicio</Link>
                         <div className="nav-item dropdown" role='button'>
-                            <button className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Menú</button>
+                            <button className="nav-link dropdown-toggle active btn" data-bs-toggle="dropdown">Menú</button>
                             <div className="dropdown-menu dropdown-menu-dark">
                                 <Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link>
                                 <Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link>
