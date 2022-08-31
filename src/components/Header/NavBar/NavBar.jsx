@@ -1,10 +1,9 @@
-import { useContext } from "react";
 import {Link} from "react-router-dom";
-import { cartContext } from "../../../context/CartContext/cartContext";
+import CartWidget from "../../widget/CartWidget";
+import LogWidget from "../../widget/LogWidget";
 
 export default function NavBar() {
     const sinBorde = {border: 'none'}
-    const {cart, cantidadTotal} = useContext(cartContext)
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
@@ -12,43 +11,28 @@ export default function NavBar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <Link to={'/'} className="navbar-brand me-5 ms-4">Bodegón</Link>
-                    <ul className="navbar-nav ms-3">
-                        <li className="nav-item">
-                            <Link to={'/'} className="nav-link active">Inicio</Link>
-                        </li>
-                        <li className="nav-item dropdown" id="navbarNavDarkDropdown">
-                            <a className="nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menú</a>
-                            <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                                <li><Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link></li>
-                                <li><Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link></li>
-                                <li><Link to={'/Categoria/Pastas'} className="dropdown-item">Pastas</Link></li>
-                                <li><Link to={'/Categoria/Minutas'} className="dropdown-item">Minutas</Link></li>
-                                <li><Link to={'/Categoria/Postres'} className="dropdown-item">Postres</Link></li>
-                                <li><Link to={'/Categoria/Bebidas'} className="dropdown-item">Bebidas</Link></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={'/Promos'} className="nav-link active">Promos</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={'/Reserva'} className="nav-link active">Reserva</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to={'/Contacto'} className="nav-link active">Contacto</Link>
-                        </li>
-                    </ul>
+                    <Link to={'/'} className="navbar-brand ms-4">Bodegón</Link>
+                    <div className="navbar-nav">
+                        <Link to={'/'} className="nav-link active">Inicio</Link>
+                        <div className="nav-item dropdown" role='button'>
+                            <a className="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Menú</a>
+                            <div className="dropdown-menu dropdown-menu-dark">
+                                <Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link>
+                                <Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link>
+                                <Link to={'/Categoria/Pastas'} className="dropdown-item">Pastas</Link>
+                                <Link to={'/Categoria/Minutas'} className="dropdown-item">Minutas</Link>
+                                <Link to={'/Categoria/Postres'} className="dropdown-item">Postres</Link>
+                                <Link to={'/Categoria/Bebidas'} className="dropdown-item">Bebidas</Link>
+                            </div>
+                        </div>
+                        <Link to={'/Promos'} className="nav-link active">Promos</Link>
+                        <Link to={'/Reserva'} className="nav-link active">Reserva</Link>
+                        <Link to={'/Contacto'} className="nav-link active">Contacto</Link>
+                    </div>
                 </div>
-                <div>
-                    <div className="d-inline p-2">
-                        <Link to={'/LogIn'} className="btn btn-outline-light" type="submit" style={sinBorde}>Iniciar Sesión</Link>
-                    </div>
-                    <div className="d-inline p-2">
-                        <Link to={'/Carrito'} className="btn btn-outline-light" type="submit" style={sinBorde}>
-                            <i className="bi-cart-fill"></i>
-                            {cart.length === 0 ? (<span></span>):(<span className="badge bg-danger text-white ms-1 rounded-pill">{cantidadTotal()}</span>)}
-                        </Link>
-                    </div>
+                <div className="d-flex me-3">
+                    <LogWidget/>
+                    <CartWidget/>
                 </div>
             </div>
         </nav>

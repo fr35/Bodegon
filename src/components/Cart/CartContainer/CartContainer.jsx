@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import { cartContext } from "../../../context/CartContext/cartContext"
 import CartItem from "../CartItem/CartItem"
 import MediosDePago from "../MediosDePago/MediosDePago"
-import { userDataContext } from "../../../context/UserContext/userContext"
 import UserInfo from "../UserInfo/UserInfo"
 
 export default function CartContainer() {
