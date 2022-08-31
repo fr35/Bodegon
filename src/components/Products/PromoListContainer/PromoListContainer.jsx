@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import { Ring } from '@uiball/loaders'
 import dataBase from '../../../services/firebase'

@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="row text-center">
                     <div className="col mt-3">
                         <h5>Ubicación</h5>
-                        <a href="https://goo.gl/maps/dJCcmaN1gZRptYac8" target="_blank" style={link}>
+                        <a href="https://goo.gl/maps/dJCcmaN1gZRptYac8" target="_blank" rel="noopener noreferrer" style={link}>
                             <p className="mt-1">12 octubre 251<br/>Quilmes<br/>Buenos Aires<br/>Argentina</p>
                         </a>
                     </div>

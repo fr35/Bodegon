@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 export default function CartItem({ id ,img, nombre, precio, precioTotal, cantidad, categoria, stock, removeItem}) {
     const imgCart = {height:'60px', width: "100px"}
     return (

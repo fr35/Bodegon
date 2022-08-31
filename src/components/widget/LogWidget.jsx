@@ -4,7 +4,7 @@ import { userDataContext } from "../../context/UserContext/userContext"
 
 export default function LogWidget() {
     const sinBorde = {border: 'none'}
-    const {userName, setUserName, userEmail, setUserEmail, userPassword, setUserPassword, userPhone, setUserPhone, userAdress, setUserAdress} = useContext(userDataContext)
+    const {userName, setUserName, setUserEmail, setUserPassword, setUserPhone, setUserAdress} = useContext(userDataContext)
     function cerrarSesión() {
         setUserName('')
         setUserEmail('')

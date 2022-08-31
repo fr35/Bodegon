@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 
 export default function UserInfo({cart, total, removeAll}) {
     const {userName, userEmail, userPhone, userAdress} = useContext(userDataContext)
-    const [orderId, setOrderId] = useState(false)
     const ordenDeCompra = {
         buyer: {userName,userEmail,userPhone,userAdress},
         items: [...cart],
@@ -18,7 +17,6 @@ export default function UserInfo({cart, total, removeAll}) {
     async function orderToFirebase() {
         const collectionRef = collection(dataBase, "orders")
         const docRef = await addDoc(collectionRef, ordenDeCompra)
-        setOrderId(docRef.id)
     }
     function finalizarCompra() {
         Swal.fire({

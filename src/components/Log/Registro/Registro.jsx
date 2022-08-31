@@ -4,10 +4,9 @@ import { userDataContext } from "../../../context/UserContext/userContext"
 export default function Registro() {
     const top = {paddingTop: '150px'}
     const ancho = {width: '600px'}
-    const {userName, setUserName, userEmail, setUserEmail, userPassword, setUserPassword, userPhone, setUserPhone, userAdress, setUserAdress} = useContext(userDataContext)
+    const {setUserName, setUserEmail, setUserPassword, setUserPhone, setUserAdress} = useContext(userDataContext)
     function handleSumbit(event){
         event.preventDefault()
-        let userAuth = true   
         let userName = event.target.elements[0].value
         setUserName(userName)
         let userEmail = event.target.elements[1].value
