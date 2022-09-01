@@ -1,15 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#background {
+  background-image: url(/public/fotos/bodegon.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 690px;
+}
+
 #form {
   background: rgba(0, 0, 0, 0.8);
   padding: 0px 100px;
 }
+

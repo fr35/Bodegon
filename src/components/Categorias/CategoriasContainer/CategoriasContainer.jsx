@@ -23,7 +23,7 @@ export default function CategoriasContainer() {
         })
     },[])
     return (
-        <section className="container mt-5">
+        <section className="container">
             <h2 className="center">Categorias</h2>
             <hr className="mb-4"/>
             <div className="center row">

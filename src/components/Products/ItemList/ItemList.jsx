@@ -9,12 +9,9 @@ export default function ItemList({data}) {
                     nombre={product.nombre}
                     precio={product.precio}
                     img={product.img}
-                    stock={product.stock}
                     promo={product.promo}
                     id={product.id}
-                    descripción={product.descripción}
                     categoria={product.categoria}
-                    url={product.url}
                 />
             )
         })

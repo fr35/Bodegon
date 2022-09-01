@@ -8,8 +8,10 @@ export default function Home() {
     return (
         <>
             <Background/>
-            <CategoriasContainer/>
-            <PromoListContainer/>
+            <div className="pt-5" id="backgroundColor">
+                <CategoriasContainer/>
+                <PromoListContainer/>
+            </div>
         </>
     )
 }

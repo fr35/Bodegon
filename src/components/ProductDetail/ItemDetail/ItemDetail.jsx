@@ -9,14 +9,12 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
     const margin = {marginTop: '100px', marginBottom: '170px'}
     const link = {marginRight: '20px', textDecoration: 'none'}
     const hr = {margin: '0rem'}
-    const imgDetail = {maxHeight: '380px'}
     const hayPromo = promo !== undefined
     const total = Math.abs(precio * promo / 100 - precio)
-
     const {addToCart} = useContext(cartContext)
     const [cantidadAlCarrito, setCantidadAlCarrito] = useState(0)
     function handleAdd(cantidad) {
-        const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria}
+        const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria, total}
         addToCart(itemToCart, cantidad)
         setCantidadAlCarrito(cantidad)
     }
@@ -34,7 +32,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
             <hr style={hr}/>
             <div className="row mt-3 d-md-flex d-block">
                 <div className="col center">
-                    <img src={img} alt={img} className='rounded img-fluid' style={imgDetail}></img>
+                    <img src={img} alt={img} className='rounded w-100 h-100'></img>
                 </div>
                 <div className="col mt-3">
                     <h3 className="center h3">{nombre}</h3>
@@ -43,7 +41,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                     (<h4 className="mt-1 text-center">
                         <span className="text-muted text-decoration-line-through me-2">${precio}</span>${total}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
                     {cantidadAlCarrito === 0 ? 
-                    (<Contador stock={stock} min={1} onAdd={handleAdd}/>) 
+                    (<Contador stock={stock}  min={1} value={cantidadAlCarrito} onAdd={handleAdd}/>) 
                     : (<div className="center"><Link className="btn btn-outline-dark" to={'/Carrito'}>Ir al carrito</Link></div>)}
                     <p className="center mt-2">Stock: {stock}</p>
                     <label htmlFor="comentarios" className="form-label"></label><textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>

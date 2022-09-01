@@ -14,13 +14,13 @@ export default function LogWidget() {
     }
     return (
         (userName === "") ? (
-            <Link to={'/LogIn'} className='btn btn-outline-light' style={sinBorde}>Iniciar Sesión</Link>
+            <Link to={'/LogIn'} className='btn text-white' style={sinBorde}>Iniciar Sesión</Link>
         ) : (
             <div className="dropdown">
-                <button className="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" style={sinBorde}>
+                <button className="btn dropdown-toggle text-white" data-bs-toggle="dropdown" style={sinBorde}>
                     <i className="bi bi-person-circle"></i>
                 </button>
-                <ul className="dropdown-menu dropdown-menu-dark">
+                <ul className="dropdown-menu">
                     <Link to={'/LogIn/Registro'} className="dropdown-item">Ajustes</Link>
                     <button className="dropdown-item" onClick={()=>cerrarSesión()}>Cerrar Sesión</button>
                 </ul>

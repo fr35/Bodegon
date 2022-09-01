@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-export default function ItemProduct({id,nombre, precio, img, stock, promo, descripción, url, categoria}) {
+export default function ItemProduct({id,nombre, precio, img, promo, categoria}) {
     const cardSize = {width: "300px"}
-    const imgSize = {Height: "200px", maxHeight: '200px'}
+    const imgSize = { maxHeight: '200px'}
     const hayPromo = promo !== undefined
     const badge ={top: '0.5rem', right: '0.5rem'}
     const total = Math.abs(precio * promo / 100 - precio)
@@ -10,7 +10,7 @@ export default function ItemProduct({id,nombre, precio, img, stock, promo, descr
     return (
         <div className="col col-lg-4 mb-5 center">
             <div className="card box h-100" style={cardSize}>
-                <img className="card-img-top" src={img} alt={nombre} style={imgSize}/>
+                <img className="img-fluid" src={img} alt={nombre} style={imgSize}/>
                     <div className="mt-auto text-center">
                         <h4 className="mt-3">{nombre}</h4>
                         {hayPromo ? (  
