@@ -8,10 +8,11 @@
 #background {
   background-image: url(/public/fotos/bodegon.jpeg);
   background-repeat: no-repeat;
+  background-size:cover;
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover;
-  height: 690px;
+  height: 100vh;
+  width: 100vw;
 }
 
 #form {
