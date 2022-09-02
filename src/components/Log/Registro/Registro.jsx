@@ -1,9 +1,9 @@
 import { useContext } from "react"
 import { userDataContext } from "../../../context/UserContext/userContext"
+import { Link } from "react-router-dom"
 
 export default function Registro() {
-    const top = {paddingTop: '150px'}
-    const ancho = {width: '600px'}
+    const img = {maxHeight: '100vh', minHeight: '100vh', width: '100%'}
     const {setUserName, setUserEmail, setUserPassword, setUserPhone, setUserAdress} = useContext(userDataContext)
     function handleSumbit(event){
         event.preventDefault()
@@ -20,9 +20,10 @@ export default function Registro() {
     }
     
     return (
-        <main id="background">
-            <div className="center" style={top}>
-                <form onSubmit={handleSumbit} id="form" style={ancho}>
+        <main>
+            <div className="center">
+                <img src="../fotos/bodegon.jpeg" alt="background" style={img}></img>
+                <form onSubmit={handleSumbit} id="form" className="position-absolute">
                     <h2 className="text-white center mt-4">Registrarse</h2>
                     <div>
                         <label htmlFor="name" className="form-label text-white"></label>
@@ -73,6 +74,7 @@ export default function Registro() {
                         <label htmlFor="submit" className="form-label"></label>
                         <input type="submit" name="submit" className="btn btn-outline-light" value='Registrarse'/>
                     </div>
+                    <p className="text-white mb-4">Si ya tienes una cuenta, haz click aquí para <Link to={'/LogIn'}>Iniciar Sesión</Link></p>
                 </form>
             </div>
         </main>

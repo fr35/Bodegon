@@ -1,20 +1,8 @@
-
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#background {
-  background-image: url(/public/fotos/bodegon.jpeg);
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center center;
-  background-attachment: fixed;
-  height: 100vh;
-  width: 100%;
-}
-
 #form {
   background: rgba(0, 0, 0, 0.8);
   padding: 0px 100px;
