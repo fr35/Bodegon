@@ -23,8 +23,8 @@ export default function Registro() {
         <main>
             <div className="center">
                 <img src="../fotos/bodegon.jpeg" alt="background" style={img}></img>
-                <form onSubmit={handleSumbit} id="form" className="position-absolute">
-                    <h2 className="text-white center mt-4">Registrarse</h2>
+                <form onSubmit={handleSumbit} id="form" className="position-absolute mt-2">
+                    <h2 className="text-white center mt-2">Registrarse</h2>
                     <div>
                         <label htmlFor="name" className="form-label text-white"></label>
                         <input 
@@ -70,7 +70,7 @@ export default function Registro() {
                         placeholder="Domicilio"
                         required/>
                     </div>
-                    <div className="center mb-4 mt-4">
+                    <div className="center mb-4 mt-2">
                         <label htmlFor="submit" className="form-label"></label>
                         <input type="submit" name="submit" className="btn btn-outline-light" value='Registrarse'/>
                     </div>

@@ -7,7 +7,7 @@ export default function LogIn() {
                 <div className="center">
                     <img src="fotos/bodegon.jpeg" alt="background" style={img}></img>
                     <form id="form" className="position-absolute">
-                        <h2 className="text-white text-center mt-4">Iniciar Sesión</h2>
+                        <h2 className="text-white text-center mt-5">Iniciar Sesión</h2>
                         <div>
                             <label htmlFor="email" className="form-label text-white"></label>
                             <input  className="form-control" 
