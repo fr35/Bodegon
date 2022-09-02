@@ -5,17 +5,21 @@ import { cartContext } from "../../../context/CartContext/cartContext";
 import Contador from "../Contador/Contador";
 
 
-export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria}) {
+export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria, precioTotal}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
     const link = {marginRight: '20px', textDecoration: 'none'}
-    const hr = {margin: '0rem'}
     const hayPromo = promo !== undefined
-    const total = Math.abs(precio * promo / 100 - precio)
+    const precioPromo = Math.abs(precio * promo / 100 - precio)
     const {addToCart} = useContext(cartContext)
     const [cantidadAlCarrito, setCantidadAlCarrito] = useState(0)
     function handleAdd(cantidad) {
-        const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria, total}
-        addToCart(itemToCart, cantidad)
+        if (hayPromo) {
+            precioTotal = precioPromo * cantidad
+        } else (
+            precioTotal = precio * cantidad
+        )
+        const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria, precioPromo, cantidad, precioTotal}
+        addToCart(itemToCart, cantidad, precioTotal)
         setCantidadAlCarrito(cantidad)
     }
 
@@ -29,7 +33,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                     <h6 className="fst-italic text-decoration-none text-secondary">{categoria}</h6>
                 </Link>
             </div>
-            <hr style={hr}/>
+            <hr className="m-0"/>
             <div className="row mt-3 d-md-flex d-block">
                 <div className="col center">
                     <img src={img} alt={img} className='rounded w-100 h-100'></img>
@@ -39,7 +43,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                     <p className="mt-2 center blockquote-footer Source Title h5">{descripción}</p>
                     {hayPromo ? 
                     (<h4 className="mt-1 text-center">
-                        <span className="text-muted text-decoration-line-through me-2">${precio}</span>${total}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
+                        <span className="text-muted text-decoration-line-through me-2">${precio}</span>${precioPromo}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
                     {cantidadAlCarrito === 0 ? 
                     (<Contador stock={stock}  min={1} value={cantidadAlCarrito} onAdd={handleAdd}/>) 
                     : (<div className="center"><Link className="btn btn-outline-dark" to={'/Carrito'}>Ir al carrito</Link></div>)}

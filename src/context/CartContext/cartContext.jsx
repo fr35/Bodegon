@@ -8,11 +8,9 @@ export function CartContextProvider ({children}) {
     function isInCart(id) {
         return (copyCart.some(itemInCart => itemInCart.id === id ))
     }
-    
     function findItem(id) {
         return (copyCart.find(item => item.id === id))
     }
-
     function addToCart(item, cantidad) {
         if (isInCart(item.id)) {
             const itemId = findItem(item.id)
@@ -28,29 +26,30 @@ export function CartContextProvider ({children}) {
             setCart(copyCart)
         }
     }
-    
     function removeItemInCart(id) {
         const itemId = findItem(id)
         const itemRemove = copyCart.indexOf(itemId)
         copyCart.splice(itemRemove, 1)
         setCart(copyCart)
     }
-    
     function removeAll() {
         copyCart = []
         setCart(copyCart)
     }
-    
     function cantidadTotal() {
         let cantidadEnCarito = 0;
         copyCart.map(item => cantidadEnCarito += item.cantidad);
         return cantidadEnCarito;
     }
-    
+    function precioTotalCompra() {
+        let precioTotalCompra = 0;
+        copyCart.map((item) => precioTotalCompra += item.precioTotal);
+        return precioTotalCompra;
+    }
     
     
     return (
-        <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal}}>
+        <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal, precioTotalCompra}}>
             {children}
         </cartContext.Provider>
     )

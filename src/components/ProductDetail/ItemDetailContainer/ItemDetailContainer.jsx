@@ -37,6 +37,7 @@ export default function ItemDetailContainer() {
                 descripción={data.descripción}
                 categoria={data.categoria}
                 url={data.url}
+                precioTotal={data.precioTotal}
             />
         </main>
     )

@@ -9,17 +9,11 @@ import UserInfo from "../UserInfo/UserInfo"
 export default function CartContainer() {
     const empty = {marginTop: '100px', marginBottom: '250px'}
     const marginTop = {marginTop: '100px'}
-    const {cart, removeItemInCart, removeAll} = useContext(cartContext)
+    const {cart, removeItemInCart, removeAll, precioTotalCompra} = useContext(cartContext)
     function removeItem(id) {
         removeItemInCart(id)
     }
     useEffect(()=> {}, [cart])
-    function precioTotalCompra(totalPrecioUnidad, totalPrecioUnidadPromo) {
-        let totalPrecioCompra = 0
-        totalPrecioUnidad.map((precio) => totalPrecioCompra += precio)
-        return totalPrecioCompra
-    }
-    
     if (cart.length === 0) {
         return (
             <main className="container" style={empty}>
@@ -57,11 +51,13 @@ export default function CartContainer() {
                                         img={item.img}
                                         nombre={item.nombre}
                                         precio={item.precio}
-                                        total={item.total}
+                                        precioPromo={Math.abs(item.precio * item.promo / 100 - item.precio)}
+                                        precioTotal={item.precioTotal}
                                         cantidad={item.cantidad}
                                         categoria={item.categoria}
                                         stock={item.stock}
                                         removeItem={removeItem}
+                                        promo={item.promo}
                                     />
                                     )
                                 })}
@@ -72,7 +68,7 @@ export default function CartContainer() {
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
-                                <th scope="col">$ {precioTotalCompra}</th>
+                                <th scope="col">$ {precioTotalCompra()}</th>
                                 <th scope="col"><button className="btn btn-danger" onClick={()=> removeAll()}>Vaciar</button></th>
                             </tr>
                         </tfoot>
