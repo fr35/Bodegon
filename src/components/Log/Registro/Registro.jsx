@@ -17,6 +17,7 @@ export default function Registro() {
         setUserPhone(userPhone)
         let userAdress = event.target.elements[4].value
         setUserAdress(userAdress)
+        
     }
     
     return (

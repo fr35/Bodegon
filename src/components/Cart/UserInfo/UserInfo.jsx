@@ -6,13 +6,13 @@ import {collection, addDoc} from "firebase/firestore";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-export default function UserInfo({cart, total, removeAll}) {
+export default function UserInfo({cart, removeAll, total}) {
     const {userName, userEmail, userPhone, userAdress} = useContext(userDataContext)
     const [orderId, setOrderId] = useState(false)
     const ordenDeCompra = {
         buyer: {userName,userEmail,userPhone,userAdress},
         items: [...cart],
-        total: total,
+        total: total(),
         date: new Date()
     }
     async function orderToFirebase() {

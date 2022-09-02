@@ -74,7 +74,7 @@ export default function CartContainer() {
                         </tfoot>
                     </table>
                 </div>
-                <UserInfo cart={cart}  removeAll={()=>removeAll()}/>
+                <UserInfo cart={cart}  removeAll={()=>removeAll()} total={()=>precioTotalCompra()}/>
                 <MediosDePago/>
             </main>
         )
