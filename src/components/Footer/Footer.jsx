@@ -6,7 +6,8 @@ export default function Footer() {
     const ul = {listStyleType: 'none', margin: '0', padding: '0'}
     const marginBottom = {marginBottom: '10px'}
     return (
-        <footer className="bg-dark">
+        <footer>
+            <hr className="text-white"/>
             <div className="container text-white">
                 <div className="row text-center">
                     <div className="col mt-3">

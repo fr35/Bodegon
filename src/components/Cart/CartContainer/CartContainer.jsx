@@ -1,10 +1,9 @@
 import { useEffect } from "react"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
-import { cartContext } from "../../../context/CartContext/cartContext"
+import { cartContext } from "../../../context/cartContext"
 import CartItem from "../CartItem/CartItem"
 import MediosDePago from "../MediosDePago/MediosDePago"
-import UserInfo from "../UserInfo/UserInfo"
 
 export default function CartContainer() {
     const empty = {marginTop: '100px', marginBottom: '250px'}
@@ -16,12 +15,12 @@ export default function CartContainer() {
     useEffect(()=> {}, [cart])
     if (cart.length === 0) {
         return (
-            <main className="container" style={empty}>
+            <main className="container text-white" style={empty}>
                 <h3 className="center mb-2">Carrito</h3>
                 <hr className="mb-4"/>
                 <h3 className="center mb-5">El carrito se encuentra vació</h3>
                 <div className="center">
-                    <Link to={'/'} className='btn btn-outline-dark'>Volver a Inicio</Link>
+                    <Link to={'/'} className='btn btn-outline-light'>Volver a Inicio</Link>
                 </div>
             </main>
         )
@@ -29,10 +28,10 @@ export default function CartContainer() {
     else {
         return (
             <main style={marginTop}>
-                <h3 className="mb-2 center">Carrito</h3>
+                <h3 className="mb-2 center text-white">Carrito</h3>
                 <div className="table-responsive">
-                    <table className="table text-center text-nowrap table-hover ">
-                        <thead className="">
+                    <table className="table text-center text-nowrap table-hover table-dark">
+                        <thead>
                             <tr>
                                 <th scope="col">Miniatura</th>
                                 <th scope="col">Nombre</th>
@@ -54,8 +53,6 @@ export default function CartContainer() {
                                         precioPromo={Math.abs(item.precio * item.promo / 100 - item.precio)}
                                         precioTotal={item.precioTotal}
                                         cantidad={item.cantidad}
-                                        categoria={item.categoria}
-                                        stock={item.stock}
                                         removeItem={removeItem}
                                         promo={item.promo}
                                     />
@@ -69,12 +66,15 @@ export default function CartContainer() {
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                                 <th scope="col">$ {precioTotalCompra()}</th>
-                                <th scope="col"><button className="btn btn-danger" onClick={()=> removeAll()}>Vaciar</button></th>
+                                <th scope="col"></th>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-                <UserInfo cart={cart}  removeAll={()=>removeAll()} total={()=>precioTotalCompra()}/>
+                <div className="center">
+                    <button className="btn btn-outline-light me-2" onClick={()=>removeAll()}>Vaciar carrito</button>
+                    <Link to={'/'} className="btn btn-outline-light ms-2">Finalizar compra</Link>
+                </div>
                 <MediosDePago/>
             </main>
         )

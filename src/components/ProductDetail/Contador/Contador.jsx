@@ -17,12 +17,12 @@ export default function Contador( {stock, onAdd} ) {
     return (
         <div>
             <div className="d-flex center">
-                <button onClick={restar} className='btn' style={sinBordes}>-</button>                               
+                <button onClick={restar} className='btn text-white' style={sinBordes}>-</button>                               
                 <h6 className="mt-2 me-1 ms-1">{cantidad}</h6>
-                <button onClick={sumar} className='btn' style={sinBordes}>+</button>
+                <button onClick={sumar} className='btn text-white' style={sinBordes}>+</button>
             </div>
             <div className="center">
-                <button to={'/Carrito'} className="btn btn-outline-dark" onClick={() => onAdd(cantidad)}>Agregar al Carrito</button>
+                <button to={'/Carrito'} className="btn btn-outline-light" onClick={() => onAdd(cantidad)}>Agregar al Carrito</button>
             </div>
         </div>
     )

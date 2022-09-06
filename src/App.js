@@ -5,17 +5,13 @@ import Home from './pages/Home';
 import ItemListContainer from './components/Products/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ProductDetail/ItemDetailContainer/ItemDetailContainer';
 import PromoListContainer from './components/Products/PromoListContainer/PromoListContainer';
-import LogIn from './components/Log/LogIn/LogIn';
-import Registro from './components/Log/Registro/Registro';
 import Footer from './components/Footer/Footer';
-import { CartContextProvider } from './context/CartContext/cartContext';
+import { CartContextProvider } from './context/cartContext';
 import CartContainer from './components/Cart/CartContainer/CartContainer';
-import { UserDataContextProvider } from './context/UserContext/userContext';
 
 function App() {
   return (
     <BrowserRouter>
-      <UserDataContextProvider>
       <CartContextProvider>
           <NavBar/>
             <Routes>
@@ -24,13 +20,10 @@ function App() {
               <Route path='/:Categoria/:id' element={<ItemDetailContainer/>}/>
               <Route path='/Promos' element={<PromoListContainer/>}/>
               <Route path='/Promos/:Categoria/:url' element={<ItemDetailContainer/>}/>
-              <Route path='/LogIn' element={<LogIn/>}/>
-              <Route path='/LogIn/Registro' element={<Registro/>}/>
               <Route path='/Carrito' element={<CartContainer/>}/>
             </Routes>
           <Footer/>
       </CartContextProvider>
-      </UserDataContextProvider>
     </BrowserRouter>
   )
 }

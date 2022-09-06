@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { cartContext } from "../../../context/CartContext/cartContext";
+import { cartContext } from "../../../context/cartContext";
 import Contador from "../Contador/Contador";
 
 
@@ -10,8 +9,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
     const link = {marginRight: '20px', textDecoration: 'none'}
     const hayPromo = promo !== undefined
     const precioPromo = Math.abs(precio * promo / 100 - precio)
-    const {addToCart} = useContext(cartContext)
-    const [cantidadAlCarrito, setCantidadAlCarrito] = useState(0)
+    const {addToCart, isInCart} = useContext(cartContext)
     function handleAdd(cantidad) {
         if (hayPromo) {
             precioTotal = precioPromo * cantidad
@@ -20,11 +18,10 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
         )
         const itemToCart = {id,nombre, precio, img, stock, promo, descripción, url, categoria, precioPromo, cantidad, precioTotal}
         addToCart(itemToCart, cantidad, precioTotal)
-        setCantidadAlCarrito(cantidad)
     }
 
     return (
-        <section className="container" style={margin}>
+        <section className="container text-white" style={margin}>
             <div className="d-flex me-5">
                 <Link to={'/'} className='me-4 fst-italic text-decoration-none text-secondary'>
                     <h6>Home</h6>
@@ -36,7 +33,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
             <hr className="m-0"/>
             <div className="row mt-3 d-md-flex d-block">
                 <div className="col center">
-                    <img src={img} alt={img} className='rounded w-100 h-100'></img>
+                    <img src={img} alt={img} className='rounded w-100 h-100 bg-dark'></img>
                 </div>
                 <div className="col mt-3">
                     <h3 className="center h3">{nombre}</h3>
@@ -44,9 +41,9 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                     {hayPromo ? 
                     (<h4 className="mt-1 text-center">
                         <span className="text-muted text-decoration-line-through me-2">${precio}</span>${precioPromo}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
-                    {cantidadAlCarrito === 0 ? 
-                    (<Contador stock={stock}  min={1} value={cantidadAlCarrito} onAdd={handleAdd}/>) 
-                    : (<div className="center"><Link className="btn btn-outline-dark" to={'/Carrito'}>Ir al carrito</Link></div>)}
+                    {isInCart(id) === false ? 
+                    (<Contador stock={stock}  onAdd={handleAdd}/>) 
+                    : (<div className="center mt-3"><Link className="btn btn-outline-light" to={'/Carrito'}>Ir al carrito</Link></div>)}
                     <p className="center mt-2">Stock: {stock}</p>
                     <label htmlFor="comentarios" className="form-label"></label><textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                 </div>
