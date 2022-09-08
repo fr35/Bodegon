@@ -7,7 +7,7 @@ El proyecto es una tienda ecommerce destinada a un restaurante Bodegón, en el c
 El proyecto fue realizado con React Js, en el que se usan las rutas para navegar por las distintas secciones de la página, los hooks y context para guardar información de los distintos tipos de dato que se requieren, JavaScript para crear las distintas funciones que realizan el calculo matematico de los distintos precios, así como también para remover productos del carrito, Css y Bootstrap para darle estilos a la página.
 
 ## Demo
-(public/fotos/bodegon.gif)
+![Alt Text](public/fotos/bodegon.gif)
 
 ## Skills
 
