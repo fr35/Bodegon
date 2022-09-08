@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { cartContext } from "../../../context/cartContext"
+import Btn from "../../Btn/Btn"
 import CartItem from "../CartItem/CartItem"
 import MediosDePago from "../MediosDePago/MediosDePago"
 
@@ -73,8 +74,12 @@ export default function CartContainer() {
                     </table>
                 </div>
                 <div className="center">
-                    <button className="btn btn-outline-light me-3" onClick={()=>removeAll()}>Vaciar Carrito</button>
-                    <Link to={'/Carrito/Checkout'} className="btn btn-outline-light ms-3">Continuar</Link>
+                    <div onClick={()=>removeAll()} className='me-3'>
+                        <Btn text={'Vaciar Carrito'}/>
+                    </div>
+                    <div className="ms-3">
+                        <Link to={'/Carrito/Checkout'}><Btn text={'Continuar'}/></Link>
+                    </div>
                 </div>
                 <MediosDePago/>
             </main>

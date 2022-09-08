@@ -1,11 +1,17 @@
+import { useEffect } from 'react'
 import { createContext, useState } from 'react'
 
 export const cartContext = createContext()
 export function CartContextProvider ({children}) {
-    const [cart, setCart] = useState([])
+    const cartStorage = JSON.parse(localStorage.getItem('setStorage')) || []
+    const [cart, setCart] = useState(cartStorage)
     let copyCart = [...cart]
+    useEffect(() => {
+        localStorage.setItem('setStorage', JSON.stringify(cart))
+    }, [cart])
+
     function isInCart(id) {
-        return (copyCart.some(itemInCart => itemInCart.id === id ))
+        return (copyCart.some(itemInCart => itemInCart.id === id))
     }
     function findItem(id) {
         return (copyCart.find(item => item.id === id))

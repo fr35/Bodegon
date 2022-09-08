@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../../context/cartContext";
+import Btn from "../../Btn/Btn";
 import Contador from "../Contador/Contador";
 
 
 export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria, precioTotal}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
-    const link = {marginRight: '20px', textDecoration: 'none'}
+    const link = {textDecoration: 'none'}
     const hayPromo = promo !== undefined
     const precioPromo = Math.abs(precio * promo / 100 - precio)
     const {addToCart, isInCart} = useContext(cartContext)
@@ -43,8 +44,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                         <span className="text-muted text-decoration-line-through me-2">${precio}</span>${precioPromo}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
                     {isInCart(id) === false ? 
                     (<Contador stock={stock}  onAdd={handleAdd}/>) 
-                    : (<div className="center mt-3"><Link className="btn btn-outline-light" to={'/Carrito'}>Ir al carrito</Link></div>)}
-                    <p className="center mt-2">Stock: {stock}</p>
+                    : (<Link className="center mt-3" to={'/Carrito'} style={link}><Btn text={'Ir al Carrito'}/></Link>)}
                     <label htmlFor="comentarios" className="form-label"></label><textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comentarios..." name="comentarios"></textarea>
                 </div>
             </div>

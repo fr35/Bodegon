@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../../context/cartContext";
 import dataBase from '../../../services/firebase' 
+import Btn from "../../Btn/Btn";
 
 export default function Checkout() {
     const margin = {marginTop: '100px'}
@@ -51,7 +52,7 @@ export default function Checkout() {
                         <p style={backgroundNone} className="mb-3">En aproximadamente 30 minutos llegará su pedido a {userData.address}</p>
                         <p style={backgroundNone}>El orden de seguimiento de su compra es: </p>
                         <p style={backgroundNone} className="center">{orderFirebase.id}</p>
-                        <Link to={'/'} className="btn btn-outline-light mt-3">Volver a Inicio</Link>
+                        <Link to={'/'}><Btn text={'Volver a Inicio'}/></Link>
                     </div>
                 </div>
             </main>

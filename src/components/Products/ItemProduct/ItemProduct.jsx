@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Btn from "../../Btn/Btn"
 
 export default function ItemProduct({id,nombre, precio, img, promo, categoria}) {
     const cardSize = {width: '400px', height: '100%', position: 'relative'}
@@ -6,7 +7,7 @@ export default function ItemProduct({id,nombre, precio, img, promo, categoria}) 
     const badge ={top: '10px', right: '10px'}
     const hayPromo = promo !== undefined
     const total = Math.abs(precio * promo / 100 - precio)
-    const boton = {background: 'none', border: 'none', color: 'inherit'}
+    const boton = {background: 'none'}
     const backgroundNone = {background: 'none'}
 
     return (
@@ -26,8 +27,8 @@ export default function ItemProduct({id,nombre, precio, img, promo, categoria}) 
                         ) : (
                         <h4 className="mt-1 text-white" style={backgroundNone}>${precio}</h4>
                         )}
-                        <Link to={`/${categoria}/${id}`} className="btn btn-outline-light mt-2 mb-3">
-                            <button style={boton}>Ver más</button>
+                        <Link to={`/${categoria}/${id}`} className="mt-2 mb-3" style={boton}>
+                            <Btn text={'Ver más'}/>
                         </Link>
                     </div>
             </div>
