@@ -4,7 +4,6 @@ export const cartContext = createContext()
 export function CartContextProvider ({children}) {
     const [cart, setCart] = useState([])
     let copyCart = [...cart]
-    console.log(cart);
     function isInCart(id) {
         return (copyCart.some(itemInCart => itemInCart.id === id ))
     }
@@ -12,19 +11,8 @@ export function CartContextProvider ({children}) {
         return (copyCart.find(item => item.id === id))
     }
     function addToCart(item, cantidad) {
-        if (isInCart(item.id)) {
-            const itemId = findItem(item.id)
-            if (item.stock > 0){
-                itemId.cantidad += cantidad;
-                item.stock -= cantidad
-                setCart(copyCart)
-            }
-        }
-        else {
             copyCart.push({ ...item, cantidad });
-            item.stock-= cantidad
             setCart(copyCart)
-        }
     }
     function removeItemInCart(id) {
         const itemId = findItem(id)
@@ -46,8 +34,6 @@ export function CartContextProvider ({children}) {
         copyCart.map((item) => precioTotalCompra += item.precioTotal);
         return precioTotalCompra;
     }
-    
-    
     return (
         <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal, precioTotalCompra, isInCart}}>
             {children}

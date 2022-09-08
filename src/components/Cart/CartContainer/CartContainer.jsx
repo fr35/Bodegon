@@ -25,7 +25,7 @@ export default function CartContainer() {
             </main>
         )
     } 
-    else {
+    
         return (
             <main style={marginTop}>
                 <h3 className="mb-2 center text-white">Carrito</h3>
@@ -50,6 +50,7 @@ export default function CartContainer() {
                                         img={item.img}
                                         nombre={item.nombre}
                                         precio={item.precio}
+                                        stock={item.stock}
                                         precioPromo={Math.abs(item.precio * item.promo / 100 - item.precio)}
                                         precioTotal={item.precioTotal}
                                         cantidad={item.cantidad}
@@ -72,14 +73,13 @@ export default function CartContainer() {
                     </table>
                 </div>
                 <div className="center">
-                    <button className="btn btn-outline-light me-2" onClick={()=>removeAll()}>Vaciar carrito</button>
-                    <Link to={'/'} className="btn btn-outline-light ms-2">Finalizar compra</Link>
+                    <button className="btn btn-outline-light me-3" onClick={()=>removeAll()}>Vaciar Carrito</button>
+                    <Link to={'/Carrito/Checkout'} className="btn btn-outline-light ms-3">Continuar</Link>
                 </div>
                 <MediosDePago/>
             </main>
         )
     }
-}
 
 
 

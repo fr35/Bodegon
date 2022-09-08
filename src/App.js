@@ -8,6 +8,7 @@ import PromoListContainer from './components/Products/PromoListContainer/PromoLi
 import Footer from './components/Footer/Footer';
 import { CartContextProvider } from './context/cartContext';
 import CartContainer from './components/Cart/CartContainer/CartContainer';
+import Checkout from './components/Cart/Checkout/Checkout';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path='/Promos' element={<PromoListContainer/>}/>
               <Route path='/Promos/:Categoria/:url' element={<ItemDetailContainer/>}/>
               <Route path='/Carrito' element={<CartContainer/>}/>
+              <Route path='/Carrito/Checkout' element={<Checkout/>}/>
             </Routes>
           <Footer/>
       </CartContextProvider>

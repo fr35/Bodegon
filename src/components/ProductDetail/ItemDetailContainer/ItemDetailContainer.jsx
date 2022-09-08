@@ -4,19 +4,22 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import dataBase from '../../../services/firebase'
 import {collection, getDoc, doc} from "firebase/firestore";
+import { Ring } from '@uiball/loaders'
 
 export default function ItemDetailContainer() {
     const [data, setData] = useState([])
     const id = useParams().id
     function getDetailById(id) {
         return new Promise((resolve) => {
-            const productCollectionRef = collection(dataBase, "menu")
-            const docRef = doc(productCollectionRef, id)
-            getDoc(docRef).then(snapshot => {
+            setTimeout(() => {
+                const productCollectionRef = collection(dataBase, "menu")
+                const docRef = doc(productCollectionRef, id)
+                getDoc(docRef).then(snapshot => {
                 resolve (
                     {...snapshot.data(), id: snapshot.id}
                 )
             })
+            }, 1000);
         })
     }
     useEffect(()=> {
@@ -24,6 +27,20 @@ export default function ItemDetailContainer() {
             setData(response)
         })
     }, [id])
+    if (data.length === 0) {
+        return (
+            <main className="center">
+                <div className="mt-5 pt-5">
+                    <Ring 
+                        size={50}
+                        lineWeight={5}
+                        speed={2} 
+                        color="white" 
+                    />
+                </div>
+            </main>
+        )
+    }
     return (
         <main>
             <ItemDetail

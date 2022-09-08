@@ -1,3 +1,4 @@
+
 export default function CartItem({ id ,img, nombre, precio, cantidad, removeItem, precioTotal, precioPromo, promo}) {
     const imgCart = {height:'60px', width: "100px"}
     const backgroundNone = {background: 'none'}

@@ -13,14 +13,16 @@ export default function PromoListContainer() {
     
     function getProductsByCategory() {
         return new Promise((resolve) => {
-            const productCollectionRef = collection(dataBase, "menu")
-            const q = query(productCollectionRef, where("promo", ">", 0))
-            getDocs(q).then(snapshot => {
+            setTimeout(() => {
+                const productCollectionRef = collection(dataBase, "menu")
+                const q = query(productCollectionRef, where("promo", ">", 0))
+                getDocs(q).then(snapshot => {
                 const docsData = snapshot.docs.map(doc => {
                     return {...doc.data(), id: doc.id}
                 })
                 resolve(docsData)
             })
+            }, 1000);
         })
     }
     useEffect(() => {

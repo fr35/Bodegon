@@ -6,11 +6,11 @@ export default function Footer() {
     const ul = {listStyleType: 'none', margin: '0', padding: '0'}
     const marginBottom = {marginBottom: '10px'}
     return (
-        <footer>
+        <footer className="">
             <hr className="text-white"/>
             <div className="container text-white">
                 <div className="row text-center">
-                    <div className="col mt-3">
+                    <div className="col mt-3 mb-3">
                         <h5>Ubicación</h5>
                         <a href="https://goo.gl/maps/dJCcmaN1gZRptYac8" target="_blank" rel="noopener noreferrer" style={link}>
                             <p className="mt-1">12 octubre 251<br/>Quilmes<br/>Buenos Aires<br/>Argentina</p>

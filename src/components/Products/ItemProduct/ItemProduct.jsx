@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom"
 
 export default function ItemProduct({id,nombre, precio, img, promo, categoria}) {
-    const cardSize = {width: "300px"}
-    const imgSize = { maxHeight: '200px', background: 'none'}
+    const cardSize = {width: '400px', height: '100%', position: 'relative'}
+    const imgSize = {height: '300px',background: 'none', width: '100%'}
+    const badge ={top: '10px', right: '10px'}
     const hayPromo = promo !== undefined
-    const badge ={top: '0.5rem', right: '0.5rem'}
     const total = Math.abs(precio * promo / 100 - precio)
     const boton = {background: 'none', border: 'none', color: 'inherit'}
     const backgroundNone = {background: 'none'}
 
     return (
-        <div className="col col-lg-4 mb-5 center">
-            <div className="card h-100 bg-dark" style={cardSize}>
-                <img className="img-fluid" src={img} alt={nombre} style={imgSize}/>
-                    <div className="mt-auto text-center bg-dark bg-opacity-50">
+        <div className="col col-lg-4 col-md-6 mb-5 center">
+            <div className="bg-dark" style={cardSize}>
+                <img src={img} alt={nombre} style={imgSize}/>
+                    <div className=" text-center bg-dark">
                         <h4 className="mt-3 text-white" style={backgroundNone}>{nombre}</h4>
                         {hayPromo ? (  
                         <>

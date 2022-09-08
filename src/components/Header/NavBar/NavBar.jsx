@@ -4,7 +4,6 @@ import CartWidget from "../../widget/CartWidget";
 export default function NavBar() {
     const sinBorde = {border: 'none'}
     return (
-        <header>
             <nav className="navbar navbar-expand-md fixed-top navbar-dark">
                 <div className="container-fluid">
                     <button className="navbar-toggler" style={sinBorde} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +15,7 @@ export default function NavBar() {
                             <Link to={'/'} className="nav-link active text-white">Inicio</Link>
                             <div className="nav-item dropdown" role='button'>
                                 <button className="nav-link dropdown-toggle active btn text-white" data-bs-toggle="dropdown" style={sinBorde}>Menú</button>
-                                <div className="dropdown-menu">
+                                <div className="dropdown-menu dropdown-menu-dark">
                                     <Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link>
                                     <Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link>
                                     <Link to={'/Categoria/Pastas'} className="dropdown-item">Pastas</Link>
@@ -33,6 +32,5 @@ export default function NavBar() {
                     <CartWidget/>
                 </div>
             </nav>
-        </header>
     )
 }
