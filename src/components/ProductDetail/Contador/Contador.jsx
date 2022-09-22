@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Btn from "../../Btn/Btn";
 
 export default function Contador( {stock, onAdd} ) {

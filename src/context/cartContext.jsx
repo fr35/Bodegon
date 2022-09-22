@@ -40,9 +40,6 @@ export function CartContextProvider ({children}) {
         copyCart.map((item) => precioTotalCompra += item.precioTotal);
         return precioTotalCompra;
     }
-    function suma() {
-        
-    }
     return (
         <cartContext.Provider value={{cart, addToCart, removeItemInCart, removeAll, cantidadTotal, precioTotalCompra, isInCart}}>
             {children}
