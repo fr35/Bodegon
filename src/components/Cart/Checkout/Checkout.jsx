@@ -12,10 +12,10 @@ export default function Checkout() {
     const form = {paddingLeft: '15vw', paddingRight: '15vw', paddingTop: '5vh', paddingBottom: '5vh'}
     const {cart, precioTotalCompra, removeAll} = useContext(cartContext)
     const [userData, setUserData] = useState({
-        name: '',
-        email: '',
-        phone: '', 
-        address: '',
+        name: "",
+        email: "",
+        phone: "", 
+        address: "",
     })
     const [orderFirebase, setOrderFirebase] = useState({
         id: '',
@@ -27,14 +27,6 @@ export default function Checkout() {
         total: precioTotalCompra(),
         date: new Date(),
     }
-    function inputChangeHandler(evt) {
-        const input = evt.target
-        const value = input.value
-        const inputName = input.name
-        let copyUserData = { ...userData }
-        copyUserData[inputName] = value
-        setUserData(copyUserData)
-    }
     async function handleSubmit(evt) {
         evt.preventDefault();    
         const collectionRef = collection(dataBase, "orders")
@@ -42,7 +34,14 @@ export default function Checkout() {
         setOrderFirebase({id: order.id, complete: true})
         removeAll()
     }
-
+    function inputChangeHandler(evt) {
+        const input = evt.target
+        const value = input.value
+        const inputName = input.name
+        let copyUser = { ...userData }
+        copyUser[inputName] = value
+        setUserData(copyUser)
+    }
     if (orderFirebase.complete === true) {
         return (
             <main style={margin} className="text-white text-center">
