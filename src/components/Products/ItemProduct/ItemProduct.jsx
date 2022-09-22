@@ -5,7 +5,6 @@ export default function ItemProduct({id,nombre, precio, img, promo, categoria}) 
     const cardSize = {width: '400px', height: '100%', position: 'relative'}
     const imgSize = {height: '300px',background: 'none', width: '100%'}
     const badge ={top: '10px', right: '10px'}
-    const hayPromo = promo !== undefined
     const total = Math.abs(precio * promo / 100 - precio)
     const boton = {background: 'none'}
     const backgroundNone = {background: 'none'}
@@ -16,7 +15,7 @@ export default function ItemProduct({id,nombre, precio, img, promo, categoria}) 
                 <img src={img} alt={nombre} style={imgSize}/>
                     <div className=" text-center bg-dark">
                         <h4 className="mt-3 text-white" style={backgroundNone}>{nombre}</h4>
-                        {hayPromo ? (  
+                        {promo > 0 ? (  
                         <>
                             <div className="badge bg-danger text-white position-absolute" style={badge}>{promo}%</div>
                             <h4 className="mt-1 text-white" style={backgroundNone}>
