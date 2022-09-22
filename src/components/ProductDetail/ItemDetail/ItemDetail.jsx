@@ -7,7 +7,7 @@ import Contador from "../Contador/Contador";
 
 export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria, precioTotal}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
-    const img = {maxHeigth: '350px', width: '100%'}
+    const imgStyle = {maxHeigth: '350px', width: '100%'}
     const link = {textDecoration: 'none'}
     const hayPromo = promo !== undefined
     const precioPromo = Math.abs(precio * promo / 100 - precio)
@@ -35,7 +35,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
             <hr className="m-0"/>
             <div className="row mt-3 d-md-flex d-block">
                 <div className="col center">
-                    <img src={img} alt={img} className='rounded bg-dark' style={img}></img>
+                    <img src={img} alt={img} className='rounded bg-dark' style={imgStyle}></img>
                 </div>
                 <div className="col mt-3">
                     <h3 className="center h3">{nombre}</h3>
