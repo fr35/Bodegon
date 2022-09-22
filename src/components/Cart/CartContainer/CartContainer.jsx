@@ -13,6 +13,7 @@ export default function CartContainer() {
     function removeItem(id) {
         removeItemInCart(id)
     }
+    console.log(cart);
     useEffect(()=> {}, [cart])
     if (cart.length === 0) {
         return (

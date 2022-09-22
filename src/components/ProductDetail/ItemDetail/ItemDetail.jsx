@@ -8,7 +8,6 @@ import Contador from "../Contador/Contador";
 export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria, precioTotal}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
     const link = {textDecoration: 'none'}
-    const hayPromo = promo !== undefined
     const precioPromo = Math.abs(precio * promo / 100 - precio)
     const {addToCart, isInCart} = useContext(cartContext)
     function handleAdd(cantidad) {
@@ -39,7 +38,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
                 <div className="col mt-3">
                     <h3 className="center h3">{nombre}</h3>
                     <p className="mt-2 center blockquote-footer Source Title h5">{descripción}</p>
-                    {hayPromo ? 
+                    {promo > 0 ? 
                     (<h4 className="mt-1 text-center">
                         <span className="text-muted text-decoration-line-through me-2">${precio}</span>${precioPromo}</h4>) : (<h4 className="center fw-bolder">${precio}</h4>)}
                     {isInCart(id) === false ? 

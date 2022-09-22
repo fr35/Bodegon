@@ -7,7 +7,7 @@ export default function CartItem({ id ,img, nombre, precio, cantidad, stock, rem
         <tr>
             <th ><img style={imgCart} src={img} alt={nombre} className="rounded"/></th>
             <td className="fw-bolder">{nombre}</td>
-            {promo !== undefined ? (
+            {promo > 0 ? (
                 <td >$ {precioPromo}</td>
             ) : (<td >$ {precio}</td>)}
             <td><h6 className="mt-2 me-1 ms-1" style={backgroundNone}>{cantidad}</h6></td>
