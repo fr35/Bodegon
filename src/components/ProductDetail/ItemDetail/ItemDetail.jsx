@@ -35,7 +35,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
             <hr className="m-0"/>
             <div className="row mt-3 d-md-flex d-block">
                 <div className="col center">
-                    <img src={img} alt={img} className='rounded bg-dark'></img>
+                    <img src={img} alt={img} className='rounded bg-dark' style={img}></img>
                 </div>
                 <div className="col mt-3">
                     <h3 className="center h3">{nombre}</h3>
