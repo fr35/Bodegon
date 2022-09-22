@@ -9,6 +9,8 @@ import Footer from './components/Footer/Footer';
 import { CartContextProvider } from './context/cartContext';
 import CartContainer from './components/Cart/CartContainer/CartContainer';
 import Checkout from './components/Cart/Checkout/Checkout';
+import Reserva from './components/Reserva/Reserva';
+import Contacto from './components/Contacto/Contacto';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
               <Route path='/Promos/:Categoria/:url' element={<ItemDetailContainer/>}/>
               <Route path='/Carrito' element={<CartContainer/>}/>
               <Route path='/Carrito/Checkout' element={<Checkout/>}/>
+              <Route path='/Reserva' element={<Reserva/>}/>
+              <Route path='/Contacto' element={<Contacto/>}/>
             </Routes>
           <Footer/>
       </CartContextProvider>

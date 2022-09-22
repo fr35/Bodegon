@@ -12,21 +12,21 @@ export default function NavBar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <Link to={'/'} className="navbar-brand ms-4 text-white">Bodegón</Link>
                         <div className="navbar-nav">
-                            <Link to={'/'} className="nav-link active text-white">Inicio</Link>
+                            <Link to={'/'} className="nav-link active text-white underline">Inicio</Link>
                             <div className="nav-item dropdown" role='button'>
-                                <button className="nav-link dropdown-toggle active btn text-white" data-bs-toggle="dropdown" style={sinBorde}>Menú</button>
+                                <button className="nav-link dropdown-toggle active btn text-white underline" data-bs-toggle="dropdown" style={sinBorde}>Menú</button>
                                 <div className="dropdown-menu dropdown-menu-dark">
-                                    <Link to={'/Categoria/Guarniciones'} className="dropdown-item ">Guarniciones</Link>
-                                    <Link to={'/Categoria/Parrilla'} className="dropdown-item">Parrilla</Link>
-                                    <Link to={'/Categoria/Pastas'} className="dropdown-item">Pastas</Link>
-                                    <Link to={'/Categoria/Minutas'} className="dropdown-item">Minutas</Link>
-                                    <Link to={'/Categoria/Postres'} className="dropdown-item">Postres</Link>
-                                    <Link to={'/Categoria/Bebidas'} className="dropdown-item">Bebidas</Link>
+                                    <Link to={'/Categoria/Guarniciones'} className="dropdown-item underline">Guarniciones</Link>
+                                    <Link to={'/Categoria/Parrilla'} className="dropdown-item underline">Parrilla</Link>
+                                    <Link to={'/Categoria/Pastas'} className="dropdown-item underline">Pastas</Link>
+                                    <Link to={'/Categoria/Minutas'} className="dropdown-item underline">Minutas</Link>
+                                    <Link to={'/Categoria/Postres'} className="dropdown-item underline">Postres</Link>
+                                    <Link to={'/Categoria/Bebidas'} className="dropdown-item underline">Bebidas</Link>
                                 </div>
                             </div>
-                            <Link to={'/Promos'} className="nav-link active text-white">Promos</Link>
-                            <Link to={'/Reserva'} className="nav-link active text-white">Reserva</Link>
-                            <Link to={'/Contacto'} className="nav-link active text-white">Contacto</Link>
+                            <Link to={'/Promos'} className="nav-link active text-white underline">Promos</Link>
+                            <Link to={'/Reserva'} className="nav-link active text-white underline">Reserva</Link>
+                            <Link to={'/Contacto'} className="nav-link active text-white underline">Contacto</Link>
                         </div>
                     </div>
                     <CartWidget/>
