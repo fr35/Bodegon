@@ -2,11 +2,11 @@
 # Bodegón
 
 Proyecto final del curso de React Js de CoderHouse
+***
 Enlace a la web del proyecto: [Bodegón](https://bodegon-fr35.netlify.app/)
 
-El proyecto es una tienda ecommerce destinada a un restaurante Bodegón, en el cual el menú esta divido por categorias, y también cuenta con una sección de promos, la cual esta diferenciada del resto. En el detalle de cada producto se encuentra un contador para elegir la cantidad deseada de productos a agregar al carrito. En el carrito se puede remover cada conjunto de item, así como también poder vaciar el carrito. Luego en el chekout, hay un formulario de usuario en donde se pide el nombre, email, teléfono y dirección, para enviar estos a la base de datos. 
-***
-El proyecto fue realizado con React Js, en el que se usan las rutas para navegar por las distintas secciones de la página, los hooks y context para guardar información de los distintos tipos de dato que se requieren, JavaScript para crear las distintas funciones que realizan el calculo matematico de los distintos precios, así como también para remover productos del carrito, Css y Bootstrap para darle estilos a la página.
+El proyecto es una tienda e-commerce vinculada a un restaurante Bodegón. En la homepage hay una sección en donde se puede navegar hacia las distintas categorías que ofrece el menú, y una sección en la que aparecen los productos con descuento del día, en el cual mediante el uso de JavaScript está hecho el cálculo del porcentaje de descuento con respecto al precio. El menú esta divido por categorías, en la que cada una cuenta con su ruta de página. Cada producto cuenta con su detalle, en el que aparece una breve descripción, y un contador para seleccionar la cantidad deseada, siempre y cuando no supere al stock disponible. En el carrito hay una tabla en la que figura cada producto agrado con su cantidad, su precio por unidad y su precio total. Luego figura el precio total de compra, y la opción de navegar hacia el Checkout. En este figura un formulario de usuario en el que luego llegara a Firebase con su nombre, mail y dirección, así como también todos los productos que fueron agregados y el precio total de la compra. Al finalizar, se le brinda al usuario el id de la compra generado automaticante por Firebase en el cual podrá hacer el seguimiento de su compra.
+
 
 ## Demo
 ![Gif](public/fotos/bodegon.gif)
