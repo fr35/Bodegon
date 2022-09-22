@@ -11,7 +11,7 @@ export default function ItemDetail({id,nombre, precio, img, stock, promo, descri
     const precioPromo = Math.abs(precio * promo / 100 - precio)
     const {addToCart, isInCart} = useContext(cartContext)
     function handleAdd(cantidad) {
-        if (hayPromo) {
+        if (promo > 0) {
             precioTotal = precioPromo * cantidad
         } else (
             precioTotal = precio * cantidad
