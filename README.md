@@ -9,7 +9,7 @@ El proyecto es una tienda e-commerce vinculada a un restaurante Bodegón. En la 
 
 
 ## Demo
-![Gif](public/fotos/bodegon.gif)
+![Gif](public/fotos/bodegon-gif.gif)
 
 
 ## Skills
