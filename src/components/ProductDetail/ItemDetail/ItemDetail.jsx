@@ -7,7 +7,7 @@ import Contador from "../Contador/Contador";
 
 export default function ItemDetail({id,nombre, precio, img, stock, promo, descripción, url, categoria, precioTotal}) {
     const margin = {marginTop: '100px', marginBottom: '170px'}
-    const imgStyle = {maxHeigth: '350px', width: '100%'}
+    const imgStyle = {maxHeigth: '300px', width: '100%'}
     const link = {textDecoration: 'none'}
     const hayPromo = promo !== undefined
     const precioPromo = Math.abs(precio * promo / 100 - precio)
