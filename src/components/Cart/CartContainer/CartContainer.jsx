@@ -10,7 +10,6 @@ export default function CartContainer() {
     const empty = {marginTop: '100px', marginBottom: '250px'}
     const marginTop = {marginTop: '100px'}
     const {cart, removeItemInCart, removeAll, precioTotalCompra} = useContext(cartContext)
-    console.log(cart);
     function removeItem(id) {
         removeItemInCart(id)
     }
